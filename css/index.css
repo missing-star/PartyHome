@@ -2,7 +2,7 @@ html,body{
 	height: 100%;
 }
 body{
-	background: url(../img/index/bg.png) no-repeat;
+	background: url(../img/index/bg.png) fixed no-repeat;
 	background-size: cover;
 	overflow: hidden;
 	padding-top: 4%;
