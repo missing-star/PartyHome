@@ -4,10 +4,10 @@ var app = new Vue({
 	},
 	methods: {
 		specialName:function(id) {
-			window.location.href = '/party-member-home/branch-life-inner.html?id=' + id;
+			window.location.href = 'branch-life-inner.html?id=' + id;
 		},
 		specialFocus:function(id) {
-			window.location.href = '/party-member-home/branch-life-inner.html?id=' + id;
+			window.location.href = 'branch-life-inner.html?id=' + id;
 		},
 		moreFocus:function() {
 			$('.right-part .right-top-part:nth-child(1)').removeClass('active');
@@ -22,7 +22,7 @@ $(function () {
 });
 
 function goHome() {
-	window.location.href = '/party-member-home/index.html';
+	window.location.href = 'index.html';
 }
 
 function goBack() {

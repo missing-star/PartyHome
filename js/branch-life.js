@@ -29,10 +29,10 @@ var app = new Vue({
 			});
 		},
 		orgInfo:function(id) {
-			window.location.href = '/party-member-home/branch-life-inner.html?id=' + id;
+			window.location.href = 'branch-life-inner.html?id=' + id;
 		},
 		workDync:function(id) {
-			window.location.href = '/party-member-home/branch-life-inner.html?id=' + id;
+			window.location.href = 'branch-life-inner.html?id=' + id;
 		}
 	}
 });
@@ -79,7 +79,7 @@ $(function () {
 
 
 function goHome() {
-	window.location.href = '/party-member-home/index.html';
+	window.location.href = 'index.html';
 }
 
 function goBack() {

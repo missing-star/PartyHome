@@ -11,31 +11,31 @@ var app = new Vue({
 		btImages: [
 			{
 				image:'img/index/1.png',
-				link:'/party-member-home/affairs-to-guide.html'
+				link:'affairs-to-guide.html'
 			},
 			{
 				image:'img/index/2.png',
-				link:'/party-member-home/group-org.html'
+				link:'group-org.html'
 			},
 			{
 				image:'img/index/3.png',
-				link:'/party-member-home/outside-the-box.html'
+				link:'outside-the-box.html'
 			},
 			{
 				image:'img/index/4.png',
-				link:'/party-member-home/newest-dyn.html'
+				link:'newest-dyn.html'
 			},
 			{
 				image:'img/index/5.png',
-				link:'/party-member-home/patrol-of-window.html'
+				link:'patrol-of-window.html'
 			},
 			{
 				image:'img/index/6.png',
-				link:'/party-member-home/branch-life.html'
+				link:'branch-life.html'
 			},
 			{
 				image:'img/index/7.png',
-				link:'/party-member-home/special-column.html'
+				link:'special-column.html'
 			}
 		]
 	},

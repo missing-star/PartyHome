@@ -10,7 +10,7 @@ var app = new Vue({
 
 
 function goHome() {
-	window.location.href = '/party-member-home/index.html';
+	window.location.href = 'index.html';
 }
 
 function goBack() {
