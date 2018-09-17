@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>他山之石</title>
+	<link href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/common.css" rel="stylesheet" />
+	<link href="css/outside-the-box.css" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<img class="home-title" src="img/index/title.png">
+	</header>
+	<div id="app" class="container">
+		<p class="bread-crumb">
+			首页 &gt; 他山之石
+		</p>
+		<div class="main-content">
+			<article class="article-content">
+				<ul>
+					<template v-for="n in 10">
+						<li class="li-main-content">
+							<img src="img/newest-dyn/more.png" />
+							<p @click="orgInfo(1)" class="p-content">组织架构名称</p>
+						</li>
+						<li class="li-dashed-line">
+							<p class="dashed-line">
+								<template v-for="n in 800">-</template>
+							</p>
+						</li>
+					</template>
+				</ul>
+			</article>
+			<div class="bottom-read-btn">
+				<a class="read-all-link" href="javascript:;" @click="readAllArticle()">查看更多+</a>
+			</div>
+		</div>
+	</div>
+	<!--home键，back键-->
+	<div class="key-group">
+		<img onclick="goHome()" src="img/branch-life/home.png" />
+		<img onclick="goBack()" src="img/branch-life/back.png" />
+	</div>
+	<script src="https://cdn.bootcss.com/vue/2.5.16/vue.min.js" type="text/javascript"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="js/outside-the-box.js" type="text/javascript"></script>
+</body>
+
+</html>
