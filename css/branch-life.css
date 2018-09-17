@@ -300,3 +300,10 @@ a.read-all-link,
 .key-group img {
 	cursor: pointer !important;
 }
+
+#carousel-image a{
+	height: 100%;
+}
+#carousel-image a img{
+	height: 100%;
+}

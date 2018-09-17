@@ -2,11 +2,11 @@ var app = new Vue({
 	el: '#app',
 	data: {
 		images: [
-			'plugins/broadcast/images/1.jpg',
-			'plugins/broadcast/images/2.jpg',
-			'plugins/broadcast/images/3.jpg',
-			'plugins/broadcast/images/4.jpg',
-			'plugins/broadcast/images/5.jpg'
+            'img/index/broadcast/1.jpg',
+            'img/index/broadcast/2.jpg',
+            'img/index/broadcast/3.jpg',
+            'img/index/broadcast/4.jpg',
+            'img/index/broadcast/5.jpg'
 		]
 	},
 	methods: {

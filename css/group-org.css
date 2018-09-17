@@ -111,9 +111,21 @@ div.class-btn-group img{
 img.scale-img{
 	transform: scale(1.2);
 }
+.img-group {
+	height: 100%;
+}
 .img-group img {
-    margin: 10px;
-    width: 400px;
+    padding: 10px;
+	width: 400px;
     border-radius: 20px;
-	box-shadow: 0 0 15px #333;
+}
+div.img-group img{
+	height: 48%;
+}
+
+#carousel-image a{
+	height: 100%;
+}
+#carousel-image a img{
+	height: 100%;
 }

@@ -60,3 +60,9 @@ img {
 * {
 	cursor: default !important;
 }
+#carousel-image a{
+	height: 100%;
+}
+#carousel-image a img{
+	height: 100%;
+}

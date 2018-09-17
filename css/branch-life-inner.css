@@ -14,7 +14,6 @@ div.container {
 }
 
 header {
-	padding-top: 3%;
 	text-align: center;
 }
 
@@ -23,7 +22,8 @@ p.bread-crumb {
 }
 
 div.main-content {
-	height: 80%;
+	position: relative;
+	height: 90%;
 	background: #FFFFFF;
 	border-radius: 8px;
 }
@@ -58,8 +58,10 @@ p.article-info {
 
 .bottom-read-btn {
 	text-align: center;
-	padding: 15px;
 	font-size: 20px;
+	position: absolute;
+	bottom: 1%;
+	width: 100%;
 }
 
 a.read-all-link {
