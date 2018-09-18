@@ -66,3 +66,6 @@ img {
 #carousel-image a img{
 	height: 100%;
 }
+div#carousel-button img{
+	cursor: pointer !important;
+}

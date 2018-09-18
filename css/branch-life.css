@@ -307,3 +307,11 @@ a.read-all-link,
 #carousel-image a img{
 	height: 100%;
 }
+
+.img-group{
+	height: 100%;
+}
+.img-group img{
+	height: 46%;
+	width: 400px;
+}
