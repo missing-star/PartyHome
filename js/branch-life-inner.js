@@ -62,6 +62,5 @@ $(function () {
             break;
 	}
 	app.titleHeader = title;
-	console.log(app.titleHeader);
     getArticleContent(params[0]);
 })
