@@ -18,16 +18,16 @@
 			首页 &gt; 党务指南
 		</p>
 		<!--
-			通知
+			党务政策
 		-->
 		<div class="main-content notice active">
 			<article class="article-content">
 				<ul>
-					<template v-for="n in 10">
+					<template v-for="notice in noticeObj.noticeList">
 						<li class="li-main-content">
 							<img src="img/newest-dyn/more.png" />
-							<p class="p-content">党内政策：人民日报9月14日评论员文章：牢牢把握教育改革发展的“九个坚持”</p>
-							<p class="p-date">2018-05-22</p>
+							<p class="p-content" @click="goDetail(notice.id,22)">{{notice.title}}</p>
+							<p class="p-date">{{notice.createtime}}</p>
 						</li>
 						<li class="li-dashed-line">
 							<p class="dashed-line">
@@ -35,23 +35,26 @@
 							</p>
 						</li>
 					</template>
+					<li v-if="noticeObj.isShow">
+						<a class="read-all-link" href="javascript:;" @click="readAllNotice(false)">查看更多+</a>
+					</li>
 				</ul>
 			</article>
 			<div class="bottom-read-btn">
-				<a class="read-all-link" href="javascript:;" @click="readAllNotice()">查看更多+</a>
+				<a class="read-all-link" href="javascript:;" @click="readAllNotice(true)">查看更多+</a>
 			</div>
 		</div>
 		<!--
-			公告
+			法规
 		-->
 		<div class="main-content announcement">
 			<article class="article-content">
 				<ul>
-					<template v-for="n in 10">
+					<template v-for="anno in annouceObj.announcementList">
 						<li class="li-main-content">
 							<img src="img/newest-dyn/more.png" />
-							<p class="p-content">法规：人民日报9月14日评论员文章：牢牢把握教育改革发展的“九个坚持”</p>
-							<p class="p-date">2018-05-22</p>
+							<p class="p-content" @click="goDetail(anno.id,23)">{{anno.title}}</p>
+							<p class="p-date">{{anno.createtime}}</p>
 						</li>
 						<li class="li-dashed-line">
 							<p class="dashed-line">
@@ -59,23 +62,26 @@
 							</p>
 						</li>
 					</template>
+					<li v-if="annouceObj.isShow">
+						<a class="read-all-link" href="javascript:;" @click="readAllAnnouncement(false)">查看更多+</a>
+					</li>
 				</ul>
 			</article>
 			<div class="bottom-read-btn">
-				<a class="read-all-link" href="javascript:;" @click="readAllAnnouncement()">查看更多+</a>
+				<a class="read-all-link" href="javascript:;" @click="readAllAnnouncement(true)">查看更多+</a>
 			</div>
 		</div>
 		<!--
-			公示
+			制度
 		-->
 		<div class="main-content publicity">
 			<article class="article-content">
 				<ul>
-					<template v-for="n in 10">
+					<template v-for="publicity in publicityObj.publicityList">
 						<li class="li-main-content">
 							<img src="img/newest-dyn/more.png" />
-							<p class="p-content">制度：人民日报9月14日评论员文章：牢牢把握教育改革发展的“九个坚持”</p>
-							<p class="p-date">2018-05-22</p>
+							<p class="p-content" @click="goDetail(publicity.id,24)">{{publicity.title}}</p>
+							<p class="p-date">{{publicity.createtime}}</p>
 						</li>
 						<li class="li-dashed-line">
 							<p class="dashed-line">
@@ -83,10 +89,13 @@
 							</p>
 						</li>
 					</template>
+					<li v-if="publicityObj.isShow">
+						<a class="read-all-link" href="javascript:;" @click="readAllPublicity(false)">查看更多+</a>
+					</li>
 				</ul>
 			</article>
 			<div class="bottom-read-btn">
-				<a class="read-all-link" href="javascript:;" @click="readAllPublicity()">查看更多+</a>
+				<a class="read-all-link" href="javascript:;" @click="readAllPublicity(true)">查看更多+</a>
 			</div>
 		</div>
 		<div class="class-btn-group">

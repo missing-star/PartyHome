@@ -20,13 +20,18 @@
 		<!--
 			组织架构
 		-->
-		<div class="main-content org active">
+		<div :class="{'main-content':true,'org':true,'active':!orgObj.isHideButton}">
 			<article class="article-content">
 				<ul>
-					<template v-for="org in orgList">
+					<template v-for="org in orgObj.orgList">
 						<li class="li-main-content">
 							<img src="img/newest-dyn/more.png" />
-							<p @click="orgInfo(org.id)" class="p-content">组织架构名称</p>
+							<template v-if="org.title">
+								<p class="p-content" @click="goInner(org.id)">{{org.title}}</p>
+							</template>
+							<template v-else>
+								<p class="p-content" @click="goInner(org.id)">{{org.names}}</p>
+							</template>
 						</li>
 						<li class="li-dashed-line">
 							<p class="dashed-line">
@@ -34,23 +39,26 @@
 							</p>
 						</li>
 					</template>
+					<li v-if="orgObj.isShow">
+						<a class="read-all-link" href="javascript:;" @click="readAllOrg(false)">查看更多+</a>
+					</li>
 				</ul>
 			</article>
 			<div class="bottom-read-btn">
-				<a class="read-all-link" href="javascript:;" @click="readAllOrg()">查看更多+</a>
+				<a class="read-all-link" href="javascript:;" @click="readAllOrg(true)">查看更多+</a>
 			</div>
 		</div>
 		<!--
 			工作动态
 		-->
-		<div class="main-content work">
+		<div :class="{'main-content':true,'work':true,'active':orgObj.isHideButton}">
 			<article class="article-content">
 				<ul>
-					<template v-for="n in 10">
+					<template v-for="item in workObj.workList">
 						<li class="li-main-content">
 							<img src="img/newest-dyn/more.png" />
-							<p @click="workDync(1)" class="p-content">人民日报9月14日评论员文章：牢牢把握教育改革发展的“九个坚持”</p>
-							<p class="p-date">2018-05-22</p>
+							<p @click="workDync(1)" class="p-content">{{item.title}}</p>
+							<p class="p-date">{{item.createtime}}</p>
 						</li>
 						<li class="li-dashed-line">
 							<p class="dashed-line">
@@ -58,10 +66,13 @@
 							</p>
 						</li>
 					</template>
+					<li  v-if="workObj.isShow">
+						<a class="read-all-link" href="javascript:;" @click="readAllWork(false)">查看更多+</a>
+					</li>
 				</ul>
 			</article>
 			<div class="bottom-read-btn">
-				<a class="read-all-link" href="javascript:;" @click="readAllArticle()">查看更多+</a>
+				<a class="read-all-link" href="javascript:;" @click="readAllWork(true)">查看更多+</a>
 			</div>
 		</div>
 		<!--
@@ -82,9 +93,9 @@
 										}'>
 				<div class="poster-btn poster-prev-btn"></div>
 				<ul class="poster-list">
-					<li v-for="image in images" class="poster-item">
-						<a href="#">
-							<img :src="image" alt="" width="100%" />
+					<li onclick="goDetail(this)" :id="image.id" v-for="image in partyMemberList" class="poster-item">
+						<a href="javascrip:;">
+							<img :src="image.image" alt="" width="100%" />
 						</a>
 					</li>
 				</ul>
@@ -94,17 +105,19 @@
 		<!--
 			支部活动
 		-->
-		<div class="main-content flex">
-			<div v-for="n in 5" class="img-group">
-				<img src="img/index/broadcast/1.jpg" />
-				<img src="img/index/broadcast/1.jpg" />
+		<div id="branch-activity" class="main-content image flex">
+			<div v-for="image in branchActList.list" class="img-group">
+				<img :src="image.image" @click="goDetail(image.id,36)" />
+			</div>
+			<div class="more"  v-if="branchActList.isMore">
+				<a class="more-link" href="javascript:;" @click="readAllBranch(false)">MORE</a>
 			</div>
 		</div>
 		<div class="class-btn-group">
-			<img class="scale-img" src="img/branch-life/1.png" />
-			<img src="img/branch-life/2.png" />
-			<img src="img/branch-life/3.png" />
-			<img src="img/branch-life/4.png" />
+			<img data-id="" :class="{'scale-img':!orgObj.isHideButton,'visible':orgObj.isHideButton}" src="img/branch-life/1.png" />
+			<img data-id="34" :class="{'scale-img':orgObj.isHideButton}" src="img/branch-life/2.png" />
+			<img data-id="35" src="img/branch-life/3.png" />
+			<img data-id="36" src="img/branch-life/4.png" />
 		</div>
 	</div>
 	<!--home键，back键-->
