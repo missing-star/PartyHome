@@ -23,10 +23,10 @@
 		<div class="main-content org active">
 			<article class="article-content">
 				<ul>
-					<template v-for="n in 10">
+					<template v-for="org in orgList">
 						<li class="li-main-content">
 							<img src="img/newest-dyn/more.png" />
-							<p @click="orgInfo(1)" class="p-content">组织架构名称</p>
+							<p @click="orgInfo(org.id)" class="p-content">组织架构名称</p>
 						</li>
 						<li class="li-dashed-line">
 							<p class="dashed-line">

@@ -49,18 +49,33 @@ $(function () {
 	params = params.map(function(value,index) {
 		return value.substring(value.indexOf('=') + 1);
 	});
-	var title = '';
-	switch (parseInt(params[1])) {
-		case 22:
-			title = '首页 &gt; 最新动态 &gt; 通知';
-			break;
-        case 23:
-            title = '首页 &gt; 最新动态 &gt; 公告';
-            break;
-        case 24:
-            title = '首页 &gt; 最新动态 &gt; 公示';
-            break;
-	}
-	app.titleHeader = title;
+	parseTitle(params[1]);
+
     getArticleContent(params[0]);
-})
+});
+
+function parseTitle(type) {
+	if(isNaN(type)) {
+		switch (type) {
+			case 'list':
+                app.titleHeader = '首页 &gt; 专题专栏 &gt; 专题专栏名称';
+				break;
+			case 'hot':
+                app.titleHeader = '首页 &gt; 专题专栏 &gt; 专题聚焦';
+				break;
+        }
+	}
+	else {
+        switch (parseInt(type)) {
+            case 22:
+                app.titleHeader = '首页 &gt; 最新动态 &gt; 通知';
+                break;
+            case 23:
+                app.titleHeader = '首页 &gt; 最新动态 &gt; 公告';
+                break;
+            case 24:
+                app.titleHeader = '首页 &gt; 最新动态 &gt; 公示';
+                break;
+        }
+	}
+}

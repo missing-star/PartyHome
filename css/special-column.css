@@ -125,6 +125,11 @@ div.left-part{
 }
 div.right-part{
 	margin-left: 5px;
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-box;
+	justify-content:center;
+	flex-wrap: wrap;
 }
 header.title-container{
 	display: flex;
@@ -176,7 +181,7 @@ li.li-main-content{
 }
 ul{
 	height: 85%;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 i.fa.fa-align-justify {
     color: #C81D1E;
@@ -199,22 +204,29 @@ div.right-bottom-part{
 }
 div.img-item{
 	border-radius: 5px;
-	width: 49%;
+	width: 48%;
 	background: #FFFFFF;
 	cursor: pointer;
+	height: 50%;
 }
 div.img-item:nth-child(1){
-	margin: 5px 5px 0 0;
+	margin: 0 5px 5px 0;
 }
 div.img-item:nth-child(2){
-	margin: 5px 0 0 5px;
+	margin: 0 0 5px 5px;
+}
+div.img-item:nth-child(3){
+	margin: 5px 5px 0 0;
+}
+div.img-item:nth-child(4){
+	margin:5px 0 0 5px;
 }
 div.img-item img{
 	border-radius: 5px 5px 0 0;
 	width: 100%;
 	height: 80%;
 }
-p.img-description {
+div.img-description {
     margin: 0;
     width: 100%;
     height: 20%;
@@ -222,7 +234,17 @@ p.img-description {
     display: -webkit-flex;
     display: -moz-box;
     align-items: center;
-    justify-content: center;
+	white-space: nowrap;
+	padding: 0 15px;
+	overflow: hidden;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+}
+p.desc-dot{
+	max-width: 100%;
+	overflow: hidden;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
 }
 div.right-top-part{
 	display: none;
@@ -242,4 +264,37 @@ div.right-top-part.active div.img-item:nth-child(1){
 }
 div.right-top-part.active div.img-item:nth-child(2){
 	margin: 0 0 0 5px;
+}
+
+
+/**
+ * 滚动条样式
+ */
+
+.left-part::-webkit-scrollbar {
+	/*滚动条整体样式*/
+	width: 12px;
+	/*高宽分别对应横竖滚动条的尺寸*/
+	height: 12px;
+}
+
+.left-part::-webkit-scrollbar-thumb {
+	/*滚动条里面小方块*/
+	border-radius: 6px;
+	-webkit-box-shadow: inset 0 0 5px #DDDDDD;
+	background: #FFFFFF;
+}
+
+.left-part::-webkit-scrollbar-track {
+	/*滚动条里面轨道*/
+	-webkit-box-shadow: inset 0 0 5px #F6F6F9;
+	border-radius: 0;
+	background: #F6F6F9;
+	border-radius: 6px;
+}
+
+li a.read-all-link {
+	display: block;
+	width: 100%;
+	text-align: center;
 }

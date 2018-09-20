@@ -36,7 +36,12 @@ var app = new Vue({
 			{
 				image:'img/index/7.png',
 				link:'branch-life.html'
-			}
+			},
+            {
+                image:'img/index/8.png',
+                link:'branch-life.html'
+            }
+
 		]
 	},
 	methods: {

@@ -7,7 +7,9 @@ var app = new Vue({
             'img/index/broadcast/3.jpg',
             'img/index/broadcast/4.jpg',
             'img/index/broadcast/5.jpg'
-		]
+		],
+		orgList:[],
+		workList:[]
 	},
 	methods: {
 		readAllOrg: function () {
@@ -84,4 +86,36 @@ function goHome() {
 
 function goBack() {
 	window.history.back(-1);
+}
+
+/**
+ * 获取组织架构数据
+ */
+function getOrgData() {
+
+}
+
+/**
+ * 获取工作动态数据
+ */
+function getOrgData() {
+
+}
+
+/**
+ * 获取党员风采数据
+ */
+function getOrgData() {
+
+}
+
+/**
+ * 获取支部活动数据
+ */
+function getOrgData() {
+
+}
+
+function getData() {
+	
 }
