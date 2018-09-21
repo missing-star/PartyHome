@@ -57,7 +57,7 @@
 					<template v-for="item in workObj.workList">
 						<li class="li-main-content">
 							<img src="img/newest-dyn/more.png" />
-							<p @click="workDync(1)" class="p-content">{{item.title}}</p>
+							<p @click="goDetail(item.id,34)" class="p-content">{{item.title}}</p>
 							<p class="p-date">{{item.createtime}}</p>
 						</li>
 						<li class="li-dashed-line">

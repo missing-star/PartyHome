@@ -169,3 +169,8 @@ a.read-all-link,
 .key-group img {
 	cursor: pointer !important;
 }
+li a.read-all-link {
+	display: block;
+	width: 100%;
+	text-align: center;
+}

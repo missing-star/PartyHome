@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>研讨交流</title>
+	<title>探讨交流</title>
 	<link href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="css/common.css" rel="stylesheet" />
 	<link href="css/discussion-and-exchange.css" rel="stylesheet">
@@ -15,16 +15,16 @@
 	</header>
 	<div id="app" class="container">
 		<p class="bread-crumb">
-			首页 &gt; 研讨交流
+			首页 &gt; 探讨交流
 		</p>
 		<div class="main-content notice active">
 			<article class="article-content">
 				<ul>
-					<template v-for="n in 10">
+					<template v-for="item in listData.list">
 						<li class="li-main-content">
 							<img src="img/newest-dyn/more.png" />
-							<p class="p-content">通知：人民日报9月14日评论员文章：牢牢把握教育改革发展的“九个坚持”</p>
-							<p class="p-date">2018-05-22</p>
+							<p @click="goDetail(item.id,38)" class="p-content">{{item.title}}</p>
+							<p class="p-date">{{item.createtime}}</p>
 						</li>
 						<li class="li-dashed-line">
 							<p class="dashed-line">
@@ -33,9 +33,12 @@
 						</li>
 					</template>
 				</ul>
+				<li v-if="listData.isShow">
+					<a class="read-all-link" href="javascript:;" @click="readAllArticle(false)">查看更多+</a>
+				</li>
 			</article>
 			<div class="bottom-read-btn">
-				<a class="read-all-link" href="javascript:;" @click="readAllNotice()">查看更多+</a>
+				<a class="read-all-link" href="javascript:;" @click="readAllArticle(true)">查看更多+</a>
 			</div>
 		</div>
 	</div>

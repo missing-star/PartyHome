@@ -20,10 +20,10 @@
 		<div class="main-content">
 			<article class="article-content">
 				<ul>
-					<template v-for="n in 10">
+					<template v-for="item in listData.list">
 						<li class="li-main-content">
 							<img src="img/newest-dyn/more.png" />
-							<p @click="orgInfo(1)" class="p-content">组织架构名称</p>
+							<p @click="goDetail(item.id,25)" class="p-content">{{item.title}}</p>
 						</li>
 						<li class="li-dashed-line">
 							<p class="dashed-line">
@@ -31,10 +31,13 @@
 							</p>
 						</li>
 					</template>
+					<li v-if="listData.isShow">
+						<a class="read-all-link" href="javascript:;" @click="readAllArticle(false)">查看更多+</a>
+					</li>
 				</ul>
 			</article>
 			<div class="bottom-read-btn">
-				<a class="read-all-link" href="javascript:;" @click="readAllArticle()">查看更多+</a>
+				<a class="read-all-link" href="javascript:;" @click="readAllArticle(true)">查看更多+</a>
 			</div>
 		</div>
 	</div>

@@ -3,6 +3,7 @@ var app = new Vue({
     el: '#app',
     data: {
         branch: '',
+        branchOrg:0,
         partyMemberList: [],
         branchActList: {
             list: [],
@@ -31,7 +32,7 @@ var app = new Vue({
             }
             else {
                 //请求下一页数据
-                getOrgData(++page0, app.branch, '');
+                getOrgData(++page0, app.branchOrg, '');
             }
         },
         readAllWork: function (isFirst) {
@@ -110,12 +111,6 @@ $(function () {
      * 获取数据
      */
     getOrgData(1, 0, '');
-    /**
-     * 监听图片容器滚动
-     */
-    $('#branch-activity').scroll(function () {
-        console.log($(this).scrollLeft());
-    });
 });
 
 /**
@@ -223,8 +218,11 @@ function getData(url, page, branch, type) {
                 case 36:
                     //支部活动数据变更
                     app.branchActList.list = app.branchActList.list.concat(data.data.list);
-                    if (data.data.total > 10) {
+                    if (data.data.total > 10 && app.branchActList.list.length != data.data.total) {
                         app.branchActList.isMore = true;
+                    }
+                    else {
+                        app.branchActList.isMore = false;
                     }
                     break;
             }
@@ -237,5 +235,5 @@ function getData(url, page, branch, type) {
 
 function goDetail(elem) {
     window.event.returnValue=false;
-    window.location.href = 'branch-life-inner.html?id=' + $(elem).attr("id") + '&type=36';
+    window.location.href = 'branch-life-inner.html?id=' + $(elem).attr("id") + '&type=35';
 }

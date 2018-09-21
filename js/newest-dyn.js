@@ -158,5 +158,5 @@ function getData(url,type,page) {
         error:function() {
 
         }
-    })
+    });
 }

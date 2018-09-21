@@ -76,6 +76,21 @@ function parseTitle(type) {
             case 24:
                 app.titleHeader = '首页 &gt; 最新动态 &gt; 公示';
                 break;
+            case 25:
+                app.titleHeader = '首页 &gt; 他山之石';
+                break;
+            case 34:
+                app.titleHeader = '首页 &gt; 支部生活 &gt; 工作动态';
+                break;
+            case 35:
+                app.titleHeader = '首页 &gt; 支部生活 &gt; 党员风采';
+                break;
+            case 36:
+                app.titleHeader = '首页 &gt; 支部生活 &gt; 支部活动';
+                break;
+            case 38:
+                app.titleHeader = '首页 &gt; 探讨交流';
+                break;
         }
 	}
 }

@@ -120,6 +120,7 @@ li.li-main-content {
 	display: -webkit-flex;
 	display: -moz-box;
 	align-items: center;
+	align-content: flex-start;
 }
 
 li.li-main-content p {
