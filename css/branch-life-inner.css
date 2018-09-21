@@ -109,3 +109,6 @@ a.read-all-link {
 	background: #F6F6F9;
 	border-radius: 6px;
 }
+iframe{
+	width: 100% !important;
+}
