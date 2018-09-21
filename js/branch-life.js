@@ -3,7 +3,7 @@ var app = new Vue({
     el: '#app',
     data: {
         branch: '',
-        branchOrg:61,
+        branchOrg: '',
         partyMemberList: [],
         branchActList: {
             list: [],
@@ -50,7 +50,7 @@ var app = new Vue({
                 getWorkData(++page1, app.branch, 34);
             }
         },
-        readAllBranch:function() {
+        readAllBranch: function () {
             getBrancActhData(++page3, app.branch, 36);
         },
         orgInfo: function (id) {
@@ -62,11 +62,11 @@ var app = new Vue({
         goInner: function (id) {
             app.branch = id;
             //组织架构点击事件
-            app.orgObj.orgList = [];
+            app.orgObj.orgList = {};
             app.orgObj.isShow = false;
             getOrgData(1, id, '');
         },
-        goDetail:function (id,type) {
+        goDetail: function (id, type) {
             window.location.href = 'branch-life-inner.html?id=' + id + '&type=' + type;
         }
     }
@@ -111,6 +111,10 @@ $(function () {
      * 获取数据
      */
     getOrgData(1, app.branchOrg, '');
+
+    /**
+     * 初始化组织架构组件
+     */
 });
 
 /**
@@ -140,6 +144,7 @@ function initPlugin() {
         isTouch = false;
     });
 }
+
 function goHome() {
     window.location.href = 'index.html';
 }
@@ -189,14 +194,17 @@ function getData(url, page, branch, type) {
         success: function (data) {
             switch (type) {
                 case '':
-                    //组织架构数据变更
-                    app.orgObj.orgList = app.orgObj.orgList.concat(data.data.list);
                     if (data.data.total > 10) {
                         app.orgObj.isShow = true;
                     }
                     if (data.data.names) {
                         app.orgObj.isHideButton = true;
                         getWorkData(1, branch, 34);
+                    }
+                    else {
+                        //组织架构数据变更
+                        app.orgObj.orgList = transformOrgData(data.data.list)[0];
+                        initOrgPlugin(app.orgObj.orgList);
                     }
                     break;
                 case 34:
@@ -208,12 +216,11 @@ function getData(url, page, branch, type) {
                     break;
                 case 35:
                     //党员风采数据变更
-                    app.partyMemberList = data.data.list.slice(0,5);
-                    console.log(app.partyMemberList);
+                    app.partyMemberList = data.data.list.slice(0, 5);
                     //加载轮播组件
-                    setTimeout(function() {
+                    setTimeout(function () {
                         initPlugin();
-                    },0);
+                    }, 0);
                     break;
                 case 36:
                     //支部活动数据变更
@@ -234,6 +241,44 @@ function getData(url, page, branch, type) {
 }
 
 function goDetail(elem) {
-    window.event.returnValue=false;
+    window.event.returnValue = false;
     window.location.href = 'branch-life-inner.html?id=' + $(elem).attr("id") + '&type=35';
+}
+
+
+function initOrgPlugin(dataSource) {
+    var datascource = dataSource;
+
+    $('#chart-container').orgchart({
+        'data': datascource,
+        toggleSiblingsResp: false,
+        'depth': 3
+    });
+}
+
+/**
+ * 组织架构数据转换
+ */
+function transformOrgData(originData) {
+    return originData.map(function (value, index) {
+        /**
+         * 不能点击
+         */
+        if (value.id == 77) {
+            return {
+                name: '<a href="javascript:;">' + value.names + '</a>',
+                children: transformOrgData(value.childlist)
+            }
+        }
+        else {
+            return {
+                name: '<a href="javascript:;" onclick="goInner(' + value.id + ')">' + value.names + '</a>',
+                children: transformOrgData(value.childlist)
+            }
+        }
+    });
+}
+
+function goInner(id) {
+    app.goInner(id);
 }

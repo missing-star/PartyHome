@@ -345,3 +345,46 @@ a.more-link {
 	color: #FFFFFF;
 	text-decoration: none;
 }
+.main-content.org.active {
+	background: transparent;
+}
+/**
+组织结构图样式
+ */
+.orgchart{
+	background-image: none;
+	width: 100%;
+}
+.orgchart .node .title{
+	height: 70px;
+	background: #ff3a3b;
+	font-size: 16px;
+}
+.orgchart .node .title a{
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-box;
+	align-items: center;
+	justify-content: center;
+	color: #FFFFFF;
+	text-decoration: none;
+	height: 100%;
+	width: 100%;
+}
+.orgchart .node{
+	width: 180px;
+}
+.orgchart .node .title {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+.orgchart td.right{
+	border-right:1px solid #ff3a3b ;
+}
+.orgchart td.top{
+	border-top: 1px solid #ff3a3b;
+}
+.orgchart td>.down{
+	background-color: #ff3a3b;
+}

@@ -23,7 +23,7 @@
             <header class="title-container">
                 <i class="fa fa-align-justify"></i>
                 <p class="title-content">专题专栏名称</p>
-                <p class="title-more" @click="readMore(true,$event)">更多&gt;</p>
+                <p class="title-more" @click="readMore(true,true,$event)">更多&gt;</p>
             </header>
             <p class="dashed-line dashed-line-title">
                 <template v-for="n in 800">-</template>
@@ -32,7 +32,12 @@
                 <template v-for="item in list.list">
                     <li class="li-main-content">
                         <img src="img/newest-dyn/more.png"/>
-                        <p @click="goDetail(item.id,'list')" class="p-content">{{item.title}}</p>
+                        <template v-if="item.title">
+                            <p @click="goDetail(item.id,'list')" class="p-content">{{item.title}}</p>
+                        </template>
+                        <template v-else>
+                            <p @click="goDetail(item.id,'names')" class="p-content">{{item.names}}</p>
+                        </template>
                     </li>
                     <li class="li-dashed-line">
                         <p class="dashed-line">
@@ -41,7 +46,12 @@
                     </li>
                 </template>
                 <li v-if="list.isShow">
-                    <a class="read-all-link" href="javascript:;" @click="readMore(false)">查看更多+</a>
+                    <template v-if="list.list[0].names">
+                        <a class="read-all-link" href="javascript:;" @click="readMore(false,true)">查看更多+</a>
+                    </template>
+                    <template v-else>
+                        <a class="read-all-link" href="javascript:;" @click="readMore(false,false)">查看更多+</a>
+                    </template>
                 </li>
             </ul>
         </div>

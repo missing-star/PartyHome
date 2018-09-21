@@ -1,8 +1,9 @@
 //当前页码
-var page = 1;
+var pageInner = pageOuter = 1;
 var app = new Vue({
 	el: '#app',
 	data: {
+		outerId:0,
 		list:{
 			list:[],
 			isShow:false
@@ -20,7 +21,7 @@ var app = new Vue({
 			$('.right-part .right-top-part:nth-child(1)').removeClass('active');
 			$('.right-part .right-top-part:nth-child(2)').addClass('active');
 		},
-        readMore:function (isFirst,event) {
+        readMore:function (isFirst,isOut,event) {
             if(isFirst) {
             	$(event.target).hide();
                 $('.left-part').css({
@@ -32,12 +33,27 @@ var app = new Vue({
             }
             else {
                 //请求下一页数据
-                getData(++page);
+				if(isOut) {
+					//外页
+                    getData(++pageOuter);
+				}
+				else {
+					//内页
+                    getInnerData(app.outerId,++pageInner,true);
+				}
             }
         },
         //跳转链接
         goDetail:function (id,type) {
-            window.location.href = 'branch-life-inner.html?id=' + id + '&type='+ type;
+			app.outerId = id;
+			if(type == 'names' || type == 'hot') {
+				//请求数据
+                getInnerData(id,1,false);
+			}
+			else {
+				//跳转
+                window.location.href = 'branch-life-inner.html?id=' + id + '&type='+ type;
+			}
         }
 	}
 });
@@ -63,19 +79,18 @@ function getData(page) {
         url:rootUrl+'index/special',
         type:'post',
         dataType:'json',
-		data:{
-        	p:page
-		},
+        data:{
+            p:page
+        },
         success:function(data) {
-			app.list.list = app.list.list.concat(data.data.list);
-			if(parseInt(data.data.total) > 10 && app.list.list.length != data.data.total) {
-				app.list.isShow = true;
-			}
-			else {
+            app.list.list = app.list.list.concat(data.data.list);
+            if(parseInt(data.data.total) > 10 && app.list.list.length != data.data.total) {
+                app.list.isShow = true;
+            }
+            else {
                 app.list.isShow = false;
-			}
-			app.hot = data.data.hot;
-			console.log(app.list.isShow);
+            }
+            app.hot = data.data.hot;
         },
         error:function () {
 
@@ -83,4 +98,33 @@ function getData(page) {
     })
 }
 
-getData(page);
+function getInnerData(id,page,isMore) {
+    $.ajax({
+        url:rootUrl+'index/index',
+        type:'post',
+        dataType:'json',
+        data:{
+            pid:id,
+            p:page
+        },
+        success:function(data) {
+        	if(isMore) {
+                app.list.list = app.list.list.concat(data.data.list);
+			}
+			else {
+                app.list.list = data.data.list;
+			}
+            if(parseInt(data.data.total) > 10 && app.list.list.length != data.data.total) {
+                app.list.isShow = true;
+            }
+            else {
+                app.list.isShow = false;
+            }
+        },
+        error:function () {
+
+        }
+    });
+}
+
+getData(pageOuter);

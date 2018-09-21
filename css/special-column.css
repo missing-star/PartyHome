@@ -298,3 +298,6 @@ li a.read-all-link {
 	width: 100%;
 	text-align: center;
 }
+p.desc-dot{
+	margin: 0;
+}
