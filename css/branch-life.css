@@ -347,6 +347,7 @@ a.more-link {
 }
 .main-content.org.active {
 	background: transparent;
+	overflow-x: scroll;
 }
 /**
 组织结构图样式
