@@ -17,23 +17,23 @@
     <p class="bread-crumb">
         首页 &gt; 群团组织
     </p>
-    <div class="main-content image active">
+    <div id="group-image" class="main-content image active">
         <article class="article-content">
             <div v-for="image in orgList.list" class="img-group">
-                <img :src="image.image" @click="goDetail(image.id,36)"/>
+                <img :src="image.image" @click="goInner(image.id)"/>
             </div>
             <div class="more" v-if="orgList.isMore">
                 <a class="more-link" href="javascript:;" @click="readAllOrg()">MORE</a>
             </div>
         </article>
     </div>
-    <div class="main-content list">
+    <div id="group-list" class="main-content list">
         <article class="article-content">
             <ul>
                 <template v-for="item in sectionList.list">
                     <li class="li-main-content">
                         <img src="img/newest-dyn/more.png"/>
-                        <p @click="goDetail(item.id,34)" class="p-content">{{item.title}}</p>
+                        <p @click="goDetail(item.id)" class="p-content">{{item.title}}</p>
                         <p class="p-date">{{item.createtime}}</p>
                     </li>
                     <li class="li-dashed-line">

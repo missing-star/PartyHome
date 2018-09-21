@@ -1,7 +1,8 @@
-var page = 1;
+var page0 = page1 = 1;
 var app = new Vue({
 	el: '#app',
 	data: {
+        sectionBranch:0,
         orgList:{
         	list:[],
 			isMore:true
@@ -13,10 +14,31 @@ var app = new Vue({
 	},
 	methods: {
         readAllOrg:function () {
-			getData(rootUrl+'index/groups',++page,62);
+			getData(rootUrl+'index/groups',++page0,62);
         },
+        goInner:function(id) {
+			$('#group-image').removeClass('active');
+			$('#group-list').addClass('active');
+			//请求数据
+			getSectionData(rootUrl+'index/groups',id,page1);
+		},
+        goDetail:function(id,type) {
+            window.location.href = 'branch-life-inner.html?id=' + id + '&type=group';
+		},
         readAllSection:function (isFirst) {
-			
+            if(isFirst) {
+                $('#group-list .article-content').css({
+                    'overflow-y': 'scroll'
+                });
+                $('#group-list .bottom-read-btn .read-all-link').hide();
+                $('#group-list .article-content').css({
+                    'height': '100%'
+                });
+            }
+            else {
+                //请求下一页数据
+                getSectionData(rootUrl+'index/groups',app.sectionBranch,++page1);
+            }
         }
 	}
 });
@@ -53,6 +75,30 @@ function getData(url,page,branch) {
 	});
 }
 
+function getSectionData(url,branch,page) {
+	app.sectionBranch = branch;
+    $.ajax({
+        url:url,
+        type:'post',
+        data:{
+            branch:branch,
+            p:page
+        },
+        success:function (data) {
+            app.sectionList.list = app.sectionList.list.concat(data.data.list);
+            if(data.data.total > 10 && app.sectionList.list.length != data.data.total) {
+                app.sectionList.isShow = true;
+            }
+            else {
+                app.sectionList.isShow = false;
+            }
+        },
+        error:function () {
+
+        }
+    });
+}
+
 $(function () {
-	getData(rootUrl+'index/groups',page,62);
+	getData(rootUrl+'index/groups',page0,62);
 })

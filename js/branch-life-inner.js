@@ -63,6 +63,9 @@ function parseTitle(type) {
 			case 'hot':
                 app.titleHeader = '首页 &gt; 专题专栏 &gt; 专题聚焦';
 				break;
+            case 'group':
+                app.titleHeader = '首页 &gt; 群团组织';
+                break;
         }
 	}
 	else {

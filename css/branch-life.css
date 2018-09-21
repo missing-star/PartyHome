@@ -338,7 +338,7 @@ a.more-link {
 	width: 100px;
 	height: 100px;
 	border-radius: 100%;
-	background: #eca8d4;
+	background: rgba(111, 101, 108, 0.3);
 	display: flex;
 	align-items: center;
 	justify-content: center;

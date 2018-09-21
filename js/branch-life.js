@@ -3,7 +3,7 @@ var app = new Vue({
     el: '#app',
     data: {
         branch: '',
-        branchOrg:0,
+        branchOrg:61,
         partyMemberList: [],
         branchActList: {
             list: [],
@@ -47,7 +47,7 @@ var app = new Vue({
             }
             else {
                 //请求下一页数据
-                getWorkData(++page1, 0, 34);
+                getWorkData(++page1, app.branch, 34);
             }
         },
         readAllBranch:function() {
@@ -110,7 +110,7 @@ $(function () {
     /**
      * 获取数据
      */
-    getOrgData(1, 0, '');
+    getOrgData(1, app.branchOrg, '');
 });
 
 /**

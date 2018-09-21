@@ -68,8 +68,11 @@ function getData(page) {
 		},
         success:function(data) {
 			app.list.list = app.list.list.concat(data.data.list);
-			if(parseInt(data.data.total) > 10) {
+			if(parseInt(data.data.total) > 10 && app.list.list.length != data.data.total) {
 				app.list.isShow = true;
+			}
+			else {
+                app.list.isShow = false;
 			}
 			app.hot = data.data.hot;
 			console.log(app.list.isShow);

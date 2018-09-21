@@ -32,9 +32,9 @@
 										}'>
 				<div class="poster-btn poster-prev-btn"></div>
 				<ul class="poster-list">
-					<li v-for="image in images" class="poster-item">
+					<li @click="goDetail(image.share_url)" v-for="image in images" class="poster-item">
 						<a href="#">
-							<img :src="image" alt="" width="100%" />
+							<img :src="image.image" alt="" width="100%" />
 						</a>
 					</li>
 				</ul>
