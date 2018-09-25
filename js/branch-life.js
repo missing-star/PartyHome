@@ -82,6 +82,10 @@ $(function () {
             workList: [],
             isShow: false
         };
+        app.branchActList = {
+            list: [],
+            isMore: true
+        };
         var img = $(this);
         if (!img.hasClass('scale-img')) {
             var index = $.inArray(img[0], $('div.class-btn-group img'));
@@ -93,16 +97,16 @@ $(function () {
         //发送请求
         switch ($(ev.target).attr("data-id")) {
             case "":
-                getOrgData(1, 0, '');
+                getOrgData(1, '', '');
                 break;
             case "34":
                 getWorkData(1, app.branch, 34);
                 break;
             case "35":
-                getWorkData(1, app.branch, 35);
+                getDangData(1, app.branch, 35);
                 break;
             case "36":
-                getWorkData(1, app.branch, 36);
+                getBrancActhData(1, app.branch, 36);
                 break;
         }
     });
@@ -249,11 +253,13 @@ function goDetail(elem) {
 function initOrgPlugin(dataSource) {
     var datascource = dataSource;
 
-    $('#chart-container').orgchart({
-        'data': datascource,
-        toggleSiblingsResp: false,
-        'depth': 3
-    });
+    if($('#chart-container').find('.orgchart').length == 0) {
+        $('#chart-container').orgchart({
+            'data': datascource,
+            toggleSiblingsResp: false,
+            'depth': 3
+        });
+    }
 }
 
 /**
