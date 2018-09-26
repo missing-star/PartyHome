@@ -37,7 +37,7 @@ function goHome() {
 }
 
 function goBack() {
-    window.history.back(-1);
+    goHome();
 }
 
 function getData(url, page) {

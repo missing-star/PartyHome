@@ -23,7 +23,7 @@ var app = new Vue({
 			getSectionData(rootUrl+'index/groups',id,page1);
 		},
         goDetail:function(id,type) {
-            window.location.href = 'branch-life-inner.html?id=' + id + '&type=group';
+            window.location.href = 'branch-life-inner.html?id=' + id + '&type=group&branch=' + app.sectionBranch;
 		},
         readAllSection:function (isFirst) {
             if(isFirst) {
@@ -49,7 +49,7 @@ function goHome() {
 }
 
 function goBack() {
-	window.history.back(-1);
+	goHome();
 }
 
 function getData(url,page,branch) {
@@ -101,4 +101,10 @@ function getSectionData(url,branch,page) {
 
 $(function () {
 	getData(rootUrl+'index/groups',page0,62);
-})
+});
+
+
+//返回页处理
+function parseBack() {
+
+}

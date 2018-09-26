@@ -97,6 +97,7 @@ $(function () {
     getNotice(1);
     getAnn(1);
     getPub(1);
+    parseBack();
 });
 
 
@@ -105,7 +106,7 @@ function goHome() {
 }
 
 function goBack() {
-	window.history.back(-1);
+	goHome();
 }
 //获取通知数据
 function getNotice(page) {
@@ -168,4 +169,24 @@ function getData(url,type,page) {
 
         }
     });
+}
+
+//返回页处理
+function parseBack() {
+    var type = location.search.substr(1).split('=')[1];
+    console.log(type);
+    switch (parseInt(type)) {
+        case 22:
+            //通知
+            $("div.class-btn-group img").eq(0).click();
+            break;
+        case 23:
+            //公告
+            $("div.class-btn-group img").eq(1).click();
+            break;
+        case 24:
+            //公示
+            $("div.class-btn-group img").eq(2).click();
+            break;
+    }
 }

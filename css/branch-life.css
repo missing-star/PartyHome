@@ -395,8 +395,7 @@ a.more-link {
 div.image-desc-container{
 	position: absolute;
 	bottom: 0;
-	margin: 0 10px;
-	width: 91%;
+	width: 100%;
 	background: linear-gradient(to top,rgba(0,0,0,0.5),rgba(0,0,0,0.1));
 	color: #FFFFFF;
 	height: 50px;
@@ -423,4 +422,8 @@ div.org-child.active{
 }
 div.org-child.list{
 	background: #ffffff;
+}
+#branch-activity .image-desc-container {
+	width: 91%;
+	margin: 0 10px;
 }

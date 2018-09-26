@@ -1,6 +1,8 @@
 var app = new Vue({
 	el: '#app',
 	data: {
+		type:'',
+		branch:'',
         articleContent:'',
 		titleHeader:''
 	},
@@ -23,7 +25,16 @@ function goHome() {
 }
 
 function goBack() {
-	window.history.back(-1);
+	var urlBack = $('.bread-crumb a').eq(1).attr('href');
+	if(urlBack) {
+        urlBack += '?type=' + app.type;
+		//返回指定页打开指定标签
+		window.location.href = urlBack;
+	}
+	else {
+		//返回上一页
+        window.history.back(-1);
+	}
 }
 
 function getArticleContent(id) {
@@ -50,7 +61,10 @@ $(function () {
 		return value.substring(value.indexOf('=') + 1);
 	});
 	parseTitle(params[1]);
-
+	app.type = params[1];
+	if(params[2]) {
+		app.branch = params[2];
+	}
     getArticleContent(params[0]);
 });
 
@@ -81,6 +95,15 @@ function parseTitle(type) {
                 break;
             case 25:
                 app.titleHeader = '<a href="index.html">首页</a> &gt; <a href="outside-the-box.html">他山之石</a>';
+                break;
+            case 28:
+                app.titleHeader = '<a href="index.html">首页</a> &gt; <a href="affairs-to-guide.html">党务指南</a> &gt; 党内政策';
+                break;
+            case 29:
+                app.titleHeader = '<a href="index.html">首页</a> &gt; <a href="affairs-to-guide.html">党务指南</a> &gt; 法规';
+                break;
+            case 30:
+                app.titleHeader = '<a href="index.html">首页</a> &gt; <a href="affairs-to-guide.html">党务指南</a> &gt; 制度';
                 break;
             case 34:
                 app.titleHeader = '<a href="index.html">首页</a> &gt; <a href="branch-life.html">支部生活</a> &gt; 工作动态';

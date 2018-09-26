@@ -129,7 +129,7 @@ $(function () {
      * 获取数据
      */
     getOrgData(1, app.branchOrg, '');
-
+    parseBack();
     /**
      * 初始化组织架构组件
      */
@@ -168,7 +168,7 @@ function goHome() {
 }
 
 function goBack() {
-    window.history.back(-1);
+    goHome();
 }
 
 /**
@@ -216,7 +216,8 @@ function getData(url, page, branch, type,isToWork) {
                         app.orgObj.isShow = true;
                     }
                     if (isToWork) {
-                        app.orgObj.isHideButton = true;
+                        // app.orgObj.isHideButton = true;
+                        $("div.class-btn-group img").eq(1).click();
                         getWorkData(1, branch, 34);
                     }
                     else {
@@ -315,4 +316,23 @@ function transformOrgData(originData) {
 
 function goInner(id) {
     app.goInner(id);
+}
+
+//返回页处理
+function parseBack() {
+    var type = location.search.substr(1).split('=')[1];
+    switch (parseInt(type)) {
+        case 34:
+            //工作动态
+            $("div.class-btn-group img").eq(1).click();
+            break;
+        case 35:
+            //党员风采
+            $("div.class-btn-group img").eq(2).click();
+            break;
+        case 36:
+            //支部活动
+            $("div.class-btn-group img").eq(3).click();
+            break;
+    }
 }

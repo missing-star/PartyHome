@@ -94,6 +94,7 @@ $(function () {
     getNotice(1);
     getAnn(1);
     getPub(1);
+    parseBack();
 });
 
 
@@ -102,7 +103,7 @@ function goHome() {
 }
 
 function goBack() {
-	window.history.back(-1);
+	goHome();
 }
 
 
@@ -158,4 +159,23 @@ function getData(url,type,page) {
 
         }
     })
+}
+
+//返回页处理
+function parseBack() {
+    var type = location.search.substr(1).split('=')[1];
+    switch (parseInt(type)) {
+        case 28:
+            //党内政策
+            $("div.class-btn-group img").eq(0).click();
+            break;
+        case 29:
+            //法规
+            $("div.class-btn-group img").eq(1).click();
+            break;
+        case 30:
+            //制度
+            $("div.class-btn-group img").eq(2).click();
+            break;
+    }
 }
