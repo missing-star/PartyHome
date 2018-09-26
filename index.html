@@ -32,6 +32,9 @@
 				<li @click="goDetail(image.url)" v-for="image in images" class="poster-item">
 					<a href="#">
 						<img :src="image.image" alt="" width="100%" />
+						<div class="image-desc-container">
+							<p class="image-desc">{{image.descript}}</p>
+						</div>
 					</a>
 				</li>
 			</ul>

@@ -94,6 +94,9 @@ function parseTitle(type) {
             case 38:
                 app.titleHeader = '首页 &gt; 探讨交流';
                 break;
+            case 59:
+                app.titleHeader = '首页 &gt; 学习体会';
+                break;
         }
 	}
 }

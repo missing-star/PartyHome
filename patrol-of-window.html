@@ -35,6 +35,9 @@
 					<li @click="goDetail(image.share_url)" v-for="image in images" class="poster-item">
 						<a href="#">
 							<img :src="image.image" alt="" width="100%" />
+							<div class="image-desc-container">
+								<p class="image-desc">{{image.title}}</p>
+							</div>
 						</a>
 					</li>
 				</ul>

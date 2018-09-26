@@ -9,6 +9,10 @@ var app = new Vue({
             list: [],
             isMore: true
         },
+        orgChildList:{
+            list:[],
+            isShow:false
+        },
         orgObj: {
             orgList: [],
             isShow: false,
@@ -60,11 +64,18 @@ var app = new Vue({
             window.location.href = 'branch-life-inner.html?id=' + id;
         },
         goInner: function (id) {
+            //隐藏组织架构图，显示列表
+            $('.org-child').toggleClass('active');
             app.branch = id;
-            //组织架构点击事件
+            app.branchOrg = id;
+            //组织架构点击事件，到列表页
             app.orgObj.orgList = {};
             app.orgObj.isShow = false;
             getOrgData(1, id, '');
+        },
+        goWorkFromOrg:function(id) {
+            //子列表点击事件，跳转到工作动态
+            getOrgData(1,id,'',true);
         },
         goDetail: function (id, type) {
             window.location.href = 'branch-life-inner.html?id=' + id + '&type=' + type;
@@ -97,6 +108,9 @@ $(function () {
         //发送请求
         switch ($(ev.target).attr("data-id")) {
             case "":
+                //显示组织架构图，隐藏列表
+                $('.org-child.chart').addClass('active');
+                $('.org-child.list').removeClass('active');
                 getOrgData(1, '', '');
                 break;
             case "34":
@@ -160,8 +174,8 @@ function goBack() {
 /**
  * 获取组织架构数据
  */
-function getOrgData(page, branch, type) {
-    getData(rootUrl + 'index/branchLife', page, branch, type);
+function getOrgData(page, branch, type,isToWork) {
+    getData(rootUrl + 'index/branchLife', page, branch, type,isToWork);
 }
 
 /**
@@ -185,7 +199,7 @@ function getBrancActhData(page, branch, type) {
     getData(rootUrl + 'index/branchLife', page, branch, type);
 }
 
-function getData(url, page, branch, type) {
+function getData(url, page, branch, type,isToWork) {
     $.ajax({
         url: url,
         data: {
@@ -201,21 +215,36 @@ function getData(url, page, branch, type) {
                     if (data.data.total > 10) {
                         app.orgObj.isShow = true;
                     }
-                    if (data.data.names) {
+                    if (isToWork) {
                         app.orgObj.isHideButton = true;
                         getWorkData(1, branch, 34);
                     }
                     else {
                         //组织架构数据变更
-                        app.orgObj.orgList = transformOrgData(data.data.list)[0];
-                        initOrgPlugin(app.orgObj.orgList);
+                        if(data.data.list.length == 1 && !data.data.total) {
+                            app.orgObj.orgList = transformOrgData(data.data.list)[0];
+                            initOrgPlugin(app.orgObj.orgList);
+                        }
+                        else {
+                            //组织子元素列表数据变更
+                            app.orgChildList.list = app.orgChildList.list.concat(data.data.list);
+                            if (data.data.total > 10 && app.orgChildList.list.length != data.data.total) {
+                                app.orgChildList.isShow = true;
+                            }
+                            else {
+                                app.orgChildList.isShow = false;
+                            }
+                        }
                     }
                     break;
                 case 34:
                     //工作动态数据变更
                     app.workObj.workList = app.workObj.workList.concat(data.data.list);
-                    if (data.data.total > 10) {
+                    if (data.data.total > 10 &&  app.workObj.workList.length != data.data.total) {
                         app.workObj.isShow = true;
+                    }
+                    else {
+                        app.workObj.isShow = false;
                     }
                     break;
                 case 35:
@@ -252,12 +281,11 @@ function goDetail(elem) {
 
 function initOrgPlugin(dataSource) {
     var datascource = dataSource;
-
     if($('#chart-container').find('.orgchart').length == 0) {
         $('#chart-container').orgchart({
             'data': datascource,
             toggleSiblingsResp: false,
-            'depth': 3
+            'depth': 2
         });
     }
 }

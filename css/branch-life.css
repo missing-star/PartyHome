@@ -217,12 +217,13 @@ div.main-content.active.image {
 	height: 12px;
 }
 
-div.main-content.flex.active::-webkit-scrollbar {
+div.main-content.flex.active::-webkit-scrollbar,div.main-content.org.active::-webkit-scrollbar {
 	/*滚动条整体样式*/
 	width: 0px;
 	/*高宽分别对应横竖滚动条的尺寸*/
 	height: 0px;
 }
+
 
 .main-content::-webkit-scrollbar-thumb {
 	/*滚动条里面小方块*/
@@ -315,6 +316,7 @@ a.read-all-link,
 .img-group{
 	height: 46%;
 	padding: 10px;
+	position: relative;
 }
 .img-group img{
 	height: 100%;
@@ -388,4 +390,37 @@ a.more-link {
 }
 .orgchart td>.down{
 	background-color: #ff3a3b;
+}
+
+div.image-desc-container{
+	position: absolute;
+	bottom: 0;
+	margin: 0 10px;
+	width: 91%;
+	background: linear-gradient(to top,rgba(0,0,0,0.5),rgba(0,0,0,0.1));
+	color: #FFFFFF;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0 0 20px 20px;
+}
+p.image-desc{
+	margin: 0 15px;
+	white-space: nowrap;
+	overflow: hidden;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	font-size: 20px;
+}
+div.org-child{
+	display: none;
+	height: 100%;
+}
+
+div.org-child.active{
+	display: block;
+}
+div.org-child.list{
+	background: #ffffff;
 }

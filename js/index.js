@@ -34,6 +34,10 @@ var app = new Vue({
             {
                 image:'img/index/8.png',
                 link:'patrol-of-window.html'
+            },
+            {
+                image:'img/index/9.png',
+                link:'study-and-experience.html'
             }
 
 		]
