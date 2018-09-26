@@ -15,7 +15,7 @@ body {
 	padding-top: 4%;
 }
 
-p.bread-crumb {
+p.bread-crumb,p.bread-crumb a {
 	color: #C81D1E;
 	font-size: 20px;
 	font-weight: bold;

@@ -58,44 +58,44 @@ function parseTitle(type) {
 	if(isNaN(type)) {
 		switch (type) {
 			case 'list':
-                app.titleHeader = '首页 &gt; 专题专栏 &gt; 专题专栏名称';
+                app.titleHeader = '<a href="index.html">首页</a> &gt; <a href="special-column.html">专题专栏</a> &gt; 专题专栏名称';
 				break;
 			case 'hot':
-                app.titleHeader = '首页 &gt; 专题专栏 &gt; 专题聚焦';
+                app.titleHeader = '<a href="index.html">首页</a> &gt; <a href="special-column.html">专题专栏</a> &gt; 专题聚焦';
 				break;
             case 'group':
-                app.titleHeader = '首页 &gt; 群团组织';
+                app.titleHeader = '<a href="index.html">首页</a> &gt; <a href="group-org.html">群团组织</a>';
                 break;
         }
 	}
 	else {
         switch (parseInt(type)) {
             case 22:
-                app.titleHeader = '首页 &gt; 最新动态 &gt; 通知';
+                app.titleHeader = '<a href="index.html">首页</a> &gt; <a href="newest-dyn.html">最新动态</a> &gt; 通知';
                 break;
             case 23:
-                app.titleHeader = '首页 &gt; 最新动态 &gt; 公告';
+                app.titleHeader = '<a href="index.html">首页</a> &gt; <a href="newest-dyn.html">最新动态</a> &gt; 公告';
                 break;
             case 24:
-                app.titleHeader = '首页 &gt; 最新动态 &gt; 公示';
+                app.titleHeader = '<a href="index.html">首页</a> &gt; <a href="newest-dyn.html">最新动态</a> &gt; 公示';
                 break;
             case 25:
-                app.titleHeader = '首页 &gt; 他山之石';
+                app.titleHeader = '<a href="index.html">首页</a> &gt; <a href="outside-the-box.html">他山之石</a>';
                 break;
             case 34:
-                app.titleHeader = '首页 &gt; 支部生活 &gt; 工作动态';
+                app.titleHeader = '<a href="index.html">首页</a> &gt; <a href="branch-life.html">支部生活</a> &gt; 工作动态';
                 break;
             case 35:
-                app.titleHeader = '首页 &gt; 支部生活 &gt; 党员风采';
+                app.titleHeader = '<a href="index.html">首页</a> &gt; <a href="branch-life.html">支部生活</a> &gt; 党员风采';
                 break;
             case 36:
-                app.titleHeader = '首页 &gt; 支部生活 &gt; 支部活动';
+                app.titleHeader = '<a href="index.html">首页</a> &gt; <a href="branch-life.html">支部生活</a> &gt; 支部活动';
                 break;
             case 38:
-                app.titleHeader = '首页 &gt; 探讨交流';
+                app.titleHeader = '<a href="index.html">首页</a> &gt; 探讨交流';
                 break;
             case 59:
-                app.titleHeader = '首页 &gt; 学习体会';
+                app.titleHeader = '<a href="index.html">首页</a> &gt; 学习体会';
                 break;
         }
 	}
