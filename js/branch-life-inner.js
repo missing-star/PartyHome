@@ -46,7 +46,10 @@ function getArticleContent(id) {
 		},
 		dataType:'json',
 		success:function(data) {
-			app.articleContent = data.data;
+			if(data.data.video) {
+				data.data = '<video src="'+data.data.video+'"></video>' + data.data;
+                app.articleContent = data.data;
+			}
 		},
 		error:function () {
 
