@@ -143,12 +143,14 @@ img.scale-img {
 }
 
 .img-group {
+    margin: 5px;
     height: 46%;
+    position: relative;
+    width: 400px;
 }
 
 .img-group img {
-    padding: 10px;
-    width: 400px;
+    width: 100%;
     border-radius: 20px;
 }
 
@@ -224,4 +226,25 @@ li a.read-all-link {
     display: block;
     width: 100%;
     text-align: center;
+}
+div.image-desc-container{
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    background: linear-gradient(to top,rgba(0,0,0,0.5),rgba(0,0,0,0.1));
+    color: #FFFFFF;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 20px 20px;
+}
+p.image-desc{
+    margin: 0 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    font-size: 20px;
 }

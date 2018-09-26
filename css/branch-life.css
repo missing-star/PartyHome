@@ -181,7 +181,6 @@ div.main-content.flex.active {
 	display: flex;
 	display: -webkit-flex;
 	display: -moz-box;
-	align-items: center;
 	overflow-x: scroll;
 	overflow-y: hidden;
 	flex-direction: column;
@@ -194,12 +193,10 @@ div.main-content.active.image {
 	display: flex;
 	display: -webkit-flex;
 	display: -moz-box;
-	align-items: center;
 	position: relative;
 }
 
 .img-group img {
-	margin: 10px;
 	width: 300px;
 	border-radius: 20px;
 	box-shadow: 0 0 2px #333;
@@ -314,13 +311,14 @@ a.read-all-link,
 }
 
 .img-group{
+	margin: 5px;
 	height: 46%;
-	padding: 10px;
+	width: 400px;
 	position: relative;
 }
 .img-group img{
 	height: 100%;
-	width: 400px;
+	width: 100%;
 }
 img.visible{
 	display: none;
@@ -424,6 +422,5 @@ div.org-child.list{
 	background: #ffffff;
 }
 #branch-activity .image-desc-container {
-	width: 91%;
-	margin: 0 10px;
+	width: 100%;
 }
