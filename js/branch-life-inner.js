@@ -28,6 +28,9 @@ function goBack() {
 	var urlBack = $('.bread-crumb a').eq(1).attr('href');
 	if(urlBack) {
         urlBack += '?type=' + app.type;
+        if(app.branch != '') {
+        	urlBack += '&branch=' + app.branch;
+		}
 		//返回指定页打开指定标签
 		window.location.href = urlBack;
 	}
@@ -46,8 +49,8 @@ function getArticleContent(id) {
 		},
 		dataType:'json',
 		success:function(data) {
-			if(data.data.attachfile == '') {
-				data.data.content = '<video controls="controls" src="http://49.4.70.109/partyHome/php/PartyHome/public/uploads/20180927/64602116807ea46a2568c4b00944f520.mp4"></video>' + data.data.content;
+			if(data.data.attachfile) {
+				data.data.content = '<video controls="controls" src="'+data.data.attachfile+'"></video>' + data.data.content;
                 app.articleContent = data.data;
                 console.log(app.articleContent);
 			}

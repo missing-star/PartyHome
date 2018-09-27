@@ -101,10 +101,18 @@ function getSectionData(url,branch,page) {
 
 $(function () {
 	getData(rootUrl+'index/groups',page0,62);
+	parseBack();
 });
 
 
 //返回页处理
 function parseBack() {
-
+    var str = location.search;
+    var params = str.substring(1).split('&');
+    params = params.map(function(value,index) {
+        return value.substring(value.indexOf('=') + 1);
+    });
+    if(params[1]) {
+        app.goInner(params[1]);
+    }
 }

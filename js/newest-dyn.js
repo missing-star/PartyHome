@@ -174,7 +174,6 @@ function getData(url,type,page) {
 //返回页处理
 function parseBack() {
     var type = location.search.substr(1).split('=')[1];
-    console.log(type);
     switch (parseInt(type)) {
         case 22:
             //通知
