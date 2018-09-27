@@ -66,6 +66,8 @@ var app = new Vue({
         goInner: function (id) {
             //隐藏组织架构图，显示列表
             $('.org-child').toggleClass('active');
+            //重置列表数据
+            app.orgChildList.list = [];
             app.branch = id;
             app.branchOrg = id;
             //组织架构点击事件，到列表页
