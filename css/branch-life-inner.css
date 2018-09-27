@@ -112,3 +112,6 @@ a.read-all-link {
 iframe{
 	width: 100% !important;
 }
+video{
+	width: 100%;
+}

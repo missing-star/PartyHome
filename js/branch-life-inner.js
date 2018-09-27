@@ -46,9 +46,10 @@ function getArticleContent(id) {
 		},
 		dataType:'json',
 		success:function(data) {
-			if(data.data.video) {
-				data.data = '<video src="'+data.data.video+'"></video>' + data.data;
+			if(data.data.attachfile == '') {
+				data.data.content = '<video controls="controls" src="http://49.4.70.109/partyHome/php/PartyHome/public/uploads/20180927/64602116807ea46a2568c4b00944f520.mp4"></video>' + data.data.content;
                 app.articleContent = data.data;
+                console.log(app.articleContent);
 			}
 		},
 		error:function () {
