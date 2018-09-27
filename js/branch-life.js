@@ -2,7 +2,7 @@ var page0 = page1 = page2 = page3 = 1;
 var app = new Vue({
     el: '#app',
     data: {
-        branch: '',
+        branch: 77,
         branchOrg: '',
         partyMemberList: [],
         branchActList: {
@@ -80,7 +80,7 @@ var app = new Vue({
             getOrgData(1,id,'',true);
         },
         goDetail: function (id, type) {
-            window.location.href = 'branch-life-inner.html?id=' + id + '&type=' + type;
+            window.location.href = 'branch-life-inner.html?id=' + id + '&type=' + type + '&branch=' + app.branch;
         }
     }
 });
@@ -220,6 +220,7 @@ function getData(url, page, branch, type,isToWork) {
                     if (isToWork) {
                         // app.orgObj.isHideButton = true;
                         $("div.class-btn-group img").eq(1).click();
+                        app.workObj.workList = [];
                         getWorkData(1, branch, 34);
                     }
                     else {
@@ -301,17 +302,9 @@ function transformOrgData(originData) {
         /**
          * 不能点击
          */
-        if (value.id == 77) {
-            return {
-                name: '<a href="javascript:;">' + value.names + '</a>',
-                children: transformOrgData(value.childlist)
-            }
-        }
-        else {
-            return {
-                name: '<a href="javascript:;" onclick="goInner(' + value.id + ')">' + value.names + '</a>',
-                children: transformOrgData(value.childlist)
-            }
+        return {
+            name: '<a href="javascript:;" onclick="goInner(' + value.id + ')">' + value.names + '</a>',
+            children: transformOrgData(value.childlist)
         }
     });
 }
@@ -322,11 +315,18 @@ function goInner(id) {
 
 //返回页处理
 function parseBack() {
-    var type = location.search.substr(1).split('=')[1];
-    switch (parseInt(type)) {
+    var str = location.search;
+    var params = str.substring(1).split('&');
+    params = params.map(function(value,index) {
+        return value.substring(value.indexOf('=') + 1);
+    });
+    switch (parseInt(params[0])) {
         case 34:
             //工作动态
-            $("div.class-btn-group img").eq(1).click();
+            if(params[1]) {
+                app.branch = app.branchOrg = params[1];
+                app.goWorkFromOrg(params[1]);
+            }
             break;
         case 35:
             //党员风采

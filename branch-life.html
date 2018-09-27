@@ -98,7 +98,7 @@
                     <a href="javascrip:;">
                         <img :src="image.image" alt="" width="100%"/>
                         <div class="image-desc-container">
-                            <p class="image-desc">{{image.names}}</p>
+                            <p class="image-desc">{{image.title}}</p>
                         </div>
                     </a>
                 </li>
@@ -113,7 +113,7 @@
         <div v-for="image in branchActList.list" class="img-group">
             <img :src="image.image" @click="goDetail(image.id,36)"/>
             <div class="image-desc-container">
-                <p class="image-desc">{{image.names}}</p>
+                <p class="image-desc">{{image.title}}</p>
             </div>
         </div>
         <div class="more" v-if="branchActList.isMore">
