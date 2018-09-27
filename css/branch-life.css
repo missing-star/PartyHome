@@ -358,7 +358,7 @@ a.more-link {
 }
 .orgchart .node .title{
 	height: 70px;
-	background: #ff3a3b;
+	background: rgba(243, 67, 68, 0.95);
 	font-size: 16px;
 }
 .orgchart .node .title a{
