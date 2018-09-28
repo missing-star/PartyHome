@@ -20,13 +20,13 @@ var app = new Vue({
 				link:'special-column.html'
 			},
 			{
-				image:'img/index/5.png',
-				link:'outside-the-box.html'
-			},
-			{
 				image:'img/index/6.png',
 				link:'discussion-and-exchange.html'
 			},
+            {
+                image:'img/index/5.png',
+                link:'outside-the-box.html'
+            },
 			{
 				image:'img/index/7.png',
 				link:'branch-life.html'
