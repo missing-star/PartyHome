@@ -51,9 +51,8 @@ function getArticleContent(id) {
 		success:function(data) {
 			if(data.data.attachfile) {
 				data.data.content = '<video controls="controls" src="'+data.data.attachfile+'"></video>' + data.data.content;
-                app.articleContent = data.data;
-                console.log(app.articleContent);
 			}
+            app.articleContent = data.data;
 		},
 		error:function () {
 
