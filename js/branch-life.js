@@ -110,7 +110,9 @@ $(function () {
         //发送请求
         switch ($(ev.target).attr("data-id")) {
             case "":
-                //显示组织架构图，隐藏列表
+                //显示组织架构图，隐藏列表,重置branch,branchOrg
+                app.branch = 77;
+                app.branchOrg = '';
                 $('.org-child.chart').addClass('active');
                 $('.org-child.list').removeClass('active');
                 getOrgData(1, '', '');
@@ -221,7 +223,7 @@ function getData(url, page, branch, type,isToWork) {
                         // app.orgObj.isHideButton = true;
                         $("div.class-btn-group img").eq(1).click();
                         app.workObj.workList = [];
-                        getWorkData(1, branch, 34);
+                        // getWorkData(1, branch, 34);
                     }
                     else {
                         //组织架构数据变更
