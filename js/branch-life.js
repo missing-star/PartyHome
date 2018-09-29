@@ -219,7 +219,7 @@ function getData(url, page, branch, type,isToWork) {
                     if (data.data.total > 10) {
                         app.orgObj.isShow = true;
                     }
-                    if (isToWork) {
+                    if (isToWork || data.data.names) {
                         // app.orgObj.isHideButton = true;
                         $("div.class-btn-group img").eq(1).click();
                         app.workObj.workList = [];
