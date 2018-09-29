@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e1766693-ae0b-48c9-b046-f0d3d31ddd04" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/branch-life.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/branch-life.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/common.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,59 +26,96 @@
     <session id="-700525758">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
-          <entry key="project.open.time.0" value="11" />
+          <entry key="project.closed" value="15" />
+          <entry key="project.open.time.0" value="12" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="2" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="19" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="77" />
-          <entry key="html" value="101" />
+          <entry key="css" value="79" />
+          <entry key="html" value="103" />
           <entry key="js" value="99" />
           <entry key="png" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="77" />
-          <entry key="HTML" value="101" />
+          <entry key="CSS" value="79" />
+          <entry key="HTML" value="103" />
           <entry key="Image" value="9" />
           <entry key="JavaScript" value="99" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="1447" />
-          <entry key="html" value="2379" />
+          <entry key="css" value="1468" />
+          <entry key="html" value="2392" />
           <entry key="js" value="9802" />
-          <entry key="txt" value="178" />
+          <entry key="txt" value="191" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="1447" />
-          <entry key="HTML" value="2379" />
+          <entry key="CSS" value="1468" />
+          <entry key="HTML" value="2392" />
           <entry key="JavaScript" value="9802" />
-          <entry key="PLAIN_TEXT" value="178" />
+          <entry key="PLAIN_TEXT" value="191" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/branch-life.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-33">
-              <caret line="205" column="9" selection-start-line="205" selection-start-column="9" selection-end-line="205" selection-end-column="9" />
+            <state relative-caret-position="81">
+              <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-565">
+              <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="90" column="17" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/common.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/branch-life.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -96,7 +133,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>item</find>
       <find>getData</find>
       <find>getInnerData</find>
       <find>.img-group</find>
@@ -126,6 +162,7 @@
       <find>getOrgData</find>
       <find>重置</find>
       <find>goInner</find>
+      <find>towork</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -163,18 +200,18 @@
         <option value="$PROJECT_DIR$/css/branch-life-inner.css" />
         <option value="$PROJECT_DIR$/js/newest-dyn.js" />
         <option value="$PROJECT_DIR$/js/group-org.js" />
-        <option value="$PROJECT_DIR$/css/index.css" />
-        <option value="$PROJECT_DIR$/css/common.css" />
         <option value="$PROJECT_DIR$/css/group-org.css" />
         <option value="$PROJECT_DIR$/css/branch-life.css" />
         <option value="$PROJECT_DIR$/css/patrol-of-window.css" />
-        <option value="$PROJECT_DIR$/branch-life.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/outside-the-box.html" />
         <option value="$PROJECT_DIR$/branch-life-inner.html" />
         <option value="$PROJECT_DIR$/js/branch-life-inner.js" />
         <option value="$PROJECT_DIR$/js/branch-life.js" />
+        <option value="$PROJECT_DIR$/branch-life.html" />
+        <option value="$PROJECT_DIR$/css/index.css" />
+        <option value="$PROJECT_DIR$/css/common.css" />
       </list>
     </option>
   </component>
@@ -185,7 +222,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="267" />
+    <option name="x" value="497" />
     <option name="y" value="-8" />
     <option name="width" value="814" />
     <option name="height" value="867" />
@@ -208,12 +245,7 @@
             <path>
               <item name="HomeParty" type="b2602c69:ProjectViewProjectNode" />
               <item name="HomeParty" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HomeParty" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HomeParty" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -288,7 +320,9 @@
       <workItem from="1538041295084" duration="3448000" />
       <workItem from="1538097778698" duration="2554000" />
       <workItem from="1538115242534" duration="541000" />
-      <workItem from="1538187407318" duration="952000" />
+      <workItem from="1538187407318" duration="1642000" />
+      <workItem from="1538189917141" duration="146000" />
+      <workItem from="1538191271652" duration="472000" />
     </task>
     <task id="LOCAL-00001" summary="定义URL全局变量">
       <created>1537166897759</created>
@@ -493,17 +527,31 @@
       <option name="project" value="LOCAL" />
       <updated>1538115526403</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="无支部直接进入工作动态">
+      <created>1538188445720</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1538188445721</updated>
+    </task>
+    <task id="LOCAL-00031" summary="无支部直接进入工作动态">
+      <created>1538188547023</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1538188547023</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129067000" />
+    <option name="totallyTimeSpent" value="130375000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.19581749" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17363751" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" />
@@ -515,36 +563,26 @@
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.11740891" />
+      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.21862349" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19581749" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="0" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.11740891" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -597,7 +635,8 @@
     <MESSAGE value="图片顺序调整" />
     <MESSAGE value="修改返回按钮" />
     <MESSAGE value="视频判断" />
-    <option name="LAST_COMMIT_MESSAGE" value="视频判断" />
+    <MESSAGE value="无支部直接进入工作动态" />
+    <option name="LAST_COMMIT_MESSAGE" value="无支部直接进入工作动态" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/img/index/bg.png">
@@ -782,24 +821,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/group-org.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
           <caret line="236" column="13" selection-start-line="236" selection-start-column="13" selection-end-line="236" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="76" column="32" lean-forward="true" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -831,24 +856,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/branch-life.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="891">
-          <caret line="33" column="70" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1269">
-          <caret line="47" column="53" lean-forward="true" selection-start-line="47" selection-start-column="53" selection-end-line="47" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -870,41 +881,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="44" column="25" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
-          <folding>
-            <element signature="e#28#32#1" expanded="true" />
-            <element signature="e#72#76#1" expanded="true" />
-            <element signature="e#28#32#1" expanded="true" />
-            <element signature="e#72#76#1" expanded="true" />
-            <element signature="e#28#32#1" expanded="true" />
-            <element signature="e#28#32#1" expanded="true" />
-            <element signature="e#68#72#1" expanded="true" />
-            <element signature="e#28#32#1" expanded="true" />
-            <element signature="e#68#72#1" expanded="true" />
-            <element signature="e#28#32#1" expanded="true" />
-            <element signature="e#68#72#1" expanded="true" />
-            <element signature="e#28#32#1" expanded="true" />
-            <element signature="e#28#32#1" expanded="true" />
-            <element signature="e#74#78#1" expanded="true" />
-            <element signature="e#28#32#1" expanded="true" />
-            <element signature="e#74#78#1" expanded="true" />
-            <element signature="e#28#32#1" expanded="true" />
-            <element signature="e#74#78#1" expanded="true" />
-            <element signature="e#28#32#1" expanded="true" />
-            <element signature="e#69#73#1" expanded="true" />
-            <element signature="e#28#32#1" expanded="true" />
-            <element signature="e#69#73#1" expanded="true" />
-            <element signature="e#28#32#1" expanded="true" />
-            <element signature="e#69#73#1" expanded="true" />
-            <element signature="e#28#32#1" expanded="true" />
-            <element signature="e#28#32#1" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/branch-life.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-33">
-          <caret line="205" column="9" selection-start-line="205" selection-start-column="9" selection-end-line="205" selection-end-column="9" />
+        <state relative-caret-position="81">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/branch-life.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-565">
+          <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="90" column="17" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
         </state>
       </provider>
     </entry>

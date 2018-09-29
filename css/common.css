@@ -21,3 +21,6 @@ p.bread-crumb,p.bread-crumb a {
 	font-size: 20px;
 	font-weight: bold;
 }
+p.image-desc{
+	font-size: 15px !important;
+}
