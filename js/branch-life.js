@@ -76,6 +76,7 @@ var app = new Vue({
             getOrgData(1, id, '');
         },
         goWorkFromOrg:function(id) {
+            app.branch = app.branchOrg = id;
             //子列表点击事件，跳转到工作动态
             getOrgData(1,id,'',true);
         },
@@ -222,7 +223,7 @@ function getData(url, page, branch, type,isToWork) {
                     if (isToWork || data.data.names) {
                         // app.orgObj.isHideButton = true;
                         $("div.class-btn-group img").eq(1).click();
-                        app.workObj.workList = [];
+                        // app.workObj.workList = [];
                         // getWorkData(1, branch, 34);
                     }
                     else {
