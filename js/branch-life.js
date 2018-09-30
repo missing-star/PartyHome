@@ -2,7 +2,7 @@ var page0 = page1 = page2 = page3 = 1;
 var app = new Vue({
     el: '#app',
     data: {
-        branch: 77,
+        branch: '',
         branchOrg: '',
         partyMemberList: [],
         branchActList: {
@@ -112,7 +112,7 @@ $(function () {
         switch ($(ev.target).attr("data-id")) {
             case "":
                 //显示组织架构图，隐藏列表,重置branch,branchOrg
-                app.branch = 77;
+                app.branch = '';
                 app.branchOrg = '';
                 $('.org-child.chart').addClass('active');
                 $('.org-child.list').removeClass('active');
