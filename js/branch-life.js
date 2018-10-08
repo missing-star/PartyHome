@@ -257,6 +257,9 @@ function getData(url, page, branch, type,isToWork) {
                 case 35:
                     //党员风采数据变更
                     app.partyMemberList = data.data.list.slice(0, 5);
+                    if(app.partyMemberList.length % 2 == 0) {
+                        app.partyMemberList.slice(0,app.partyMemberList.length - 1);
+                    }
                     //加载轮播组件
                     setTimeout(function () {
                         initPlugin();
@@ -323,11 +326,13 @@ function parseBack() {
     params = params.map(function(value,index) {
         return value.substring(value.indexOf('=') + 1);
     });
+    if(params[1]) {
+        app.branch = app.branchOrg = params[1];
+    }
     switch (parseInt(params[0])) {
         case 34:
             //工作动态
             if(params[1]) {
-                app.branch = app.branchOrg = params[1];
                 app.goWorkFromOrg(params[1]);
             }
             break;
