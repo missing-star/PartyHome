@@ -5,7 +5,7 @@ var app = new Vue({
 	},
 	methods: {
 		goDetail:function (url) {
-			window.open(url);
+			window.open(url+'&type=37');
         }
 	}
 });
