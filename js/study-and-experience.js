@@ -24,7 +24,7 @@ var app = new Vue({
             }
         },
         goDetail: function (id, type) {
-            window.location.href = 'branch-life-inner.html?id='+id + '&type=' + type;
+            window.open('branch-life-inner.html?id='+id + '&type=' + type);
         }
     }
 });

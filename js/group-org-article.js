@@ -17,10 +17,13 @@ var app = new Vue({
 			getData(rootUrl+'index/groups',++page0,62);
         },
         goInner:function(id) {
-			window.open('group-org-article.html?groupId=' + id);
+			$('#group-image').removeClass('active');
+			$('#group-list').addClass('active');
+			//请求数据
+			getSectionData(rootUrl+'index/groups',id,page1);
 		},
         goDetail:function(id,type) {
-            window.location.href = 'branch-life-inner.html?id=' + id + '&type=group&branch=' + app.sectionBranch;
+            window.open('branch-life-inner.html?id=' + id + '&type=group&branch=' + app.sectionBranch);
 		},
         readAllSection:function (isFirst) {
             if(isFirst) {
@@ -98,7 +101,7 @@ function getSectionData(url,branch,page) {
 
 $(function () {
 	getData(rootUrl+'index/groups',page0,62);
-	parseBack();
+    parseGroup();
 });
 
 
@@ -111,5 +114,15 @@ function parseBack() {
     });
     if(params[1]) {
         app.goInner(params[1]);
+    }
+}
+
+/**
+ * 处理群团组织
+ */
+function parseGroup() {
+    var groupId = transformParams().groupId;
+    if(groupId) {
+        app.goInner(groupId);
     }
 }

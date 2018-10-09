@@ -289,8 +289,7 @@ function getData(url, page, branch, type,isToWork) {
 }
 
 function goDetail(elem) {
-    window.event.returnValue = false;
-    window.location.href = 'branch-life-inner.html?id=' + $(elem).attr("id") + '&type=35';
+    window.open('branch-life-inner.html?id=' + $(elem).attr("id") + '&type=35');
 }
 
 

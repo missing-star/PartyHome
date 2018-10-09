@@ -72,7 +72,7 @@ var app = new Vue({
         },
         //跳转链接
         goDetail:function (id,type) {
-            window.location.href = 'branch-life-inner.html?id=' + id + '&type=' + type;
+            window.open('branch-life-inner.html?id=' + id + '&type=' + type);
         }
 	}
 });

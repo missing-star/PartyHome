@@ -45,15 +45,7 @@ var app = new Vue({
         },
         //跳转链接
         goDetail:function (id,type) {
-			app.outerId = id;
-			if(type == 'names' || type == 'hot') {
-				//请求数据
-                getInnerData(id,1,false);
-			}
-			else {
-				//跳转
-                window.location.href = 'branch-life-inner.html?id=' + id + '&type='+ type;
-			}
+		    window.open('special-column-article.html?specialId=' + id + '&type=' + type);
         }
 	}
 });
