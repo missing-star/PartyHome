@@ -106,7 +106,7 @@ function goHome() {
 }
 
 function goBack() {
-	goHome();
+    window.close();
 }
 //获取通知数据
 function getNotice(page) {

@@ -103,7 +103,7 @@ function goHome() {
 }
 
 function goBack() {
-	goHome();
+	window.close();
 }
 
 

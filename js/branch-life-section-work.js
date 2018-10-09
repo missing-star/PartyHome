@@ -64,21 +64,16 @@ var app = new Vue({
             window.location.href = 'branch-life-inner.html?id=' + id;
         },
         goInner: function (id) {
-            /**
-             *  组织架构图点击事件
-             *  跳转页面
-             */
-            window.open('branch-life-section.html?orgId=' + id);
-            // //隐藏组织架构图，显示列表
-            // $('.org-child').toggleClass('active');
-            // //重置列表数据
-            // app.orgChildList.list = [];
-            // app.branch = id;
-            // app.branchOrg = id;
-            // //组织架构点击事件，到列表页
-            // app.orgObj.orgList = {};
-            // app.orgObj.isShow = false;
-            // getOrgData(1, id, '');
+            //隐藏组织架构图，显示列表
+            $('.org-child').toggleClass('active');
+            //重置列表数据
+            app.orgChildList.list = [];
+            app.branch = id;
+            app.branchOrg = id;
+            //组织架构点击事件，到列表页
+            app.orgObj.orgList = {};
+            app.orgObj.isShow = false;
+            getOrgData(1, id, '');
         },
         goWorkFromOrg:function(id) {
             app.branch = app.branchOrg = id;
@@ -117,11 +112,11 @@ $(function () {
         switch ($(ev.target).attr("data-id")) {
             case "":
                 //显示组织架构图，隐藏列表,重置branch,branchOrg
-                app.branch = '';
-                app.branchOrg = '';
-                $('.org-child.chart').addClass('active');
-                $('.org-child.list').removeClass('active');
-                getOrgData(1, '', '');
+                // app.branch = '';
+                // app.branchOrg = '';
+                // $('.org-child.chart').addClass('active');
+                // $('.org-child.list').removeClass('active');
+                // getOrgData(1, '', '');
                 break;
             case "34":
                 getWorkData(1, app.branch, 34);
@@ -138,8 +133,9 @@ $(function () {
     /**
      * 获取数据
      */
-    getOrgData(1, app.branchOrg, '');
-    parseBack();
+    // getOrgData(1, app.branchOrg, '');
+    // parseBack();
+    parseSection();
     /**
      * 初始化组织架构组件
      */
@@ -289,8 +285,8 @@ function getData(url, page, branch, type,isToWork) {
 }
 
 function goDetail(elem) {
-    window.event.returnValue = false;
-    window.location.href = 'branch-life-inner.html?id=' + $(elem).attr("id") + '&type=35';
+    // window.event.returnValue = false;
+    window.open('branch-life-inner.html?id=' + $(elem).attr("id") + '&type=35','_blank');
 }
 
 
@@ -350,4 +346,19 @@ function parseBack() {
             $("div.class-btn-group img").eq(3).click();
             break;
     }
+}
+
+function parseSection() {
+    var sectionId = transformParams().sectionId;
+    app.goWorkFromOrg(sectionId);
+}
+
+function transformParams() {
+    var params = location.search.substring(1).split('&');
+    var param = {};
+    params.forEach(function(value,index,array) {
+        var temp = value.split('=');
+        param[temp[0]] = temp[1];
+    });
+    return param;
 }

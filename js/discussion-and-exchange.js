@@ -34,7 +34,7 @@ function goHome() {
 }
 
 function goBack() {
-	window.history.back(-1);
+    window.close();
 }
 function getData(url, page) {
     $.ajax({

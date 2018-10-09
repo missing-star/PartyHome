@@ -64,29 +64,26 @@ var app = new Vue({
             window.location.href = 'branch-life-inner.html?id=' + id;
         },
         goInner: function (id) {
-            /**
-             *  组织架构图点击事件
-             *  跳转页面
-             */
-            window.open('branch-life-section.html?orgId=' + id);
-            // //隐藏组织架构图，显示列表
-            // $('.org-child').toggleClass('active');
-            // //重置列表数据
-            // app.orgChildList.list = [];
-            // app.branch = id;
-            // app.branchOrg = id;
-            // //组织架构点击事件，到列表页
-            // app.orgObj.orgList = {};
-            // app.orgObj.isShow = false;
-            // getOrgData(1, id, '');
+            //隐藏组织架构图，显示列表
+            $('.org-child').toggleClass('active');
+            //重置列表数据
+            app.orgChildList.list = [];
+            app.branch = id;
+            app.branchOrg = id;
+            //组织架构点击事件，到列表页
+            app.orgObj.orgList = {};
+            app.orgObj.isShow = false;
+            getOrgData(1, id, '');
         },
         goWorkFromOrg:function(id) {
-            app.branch = app.branchOrg = id;
-            //子列表点击事件，跳转到工作动态
-            getOrgData(1,id,'',true);
+            window.open('branch-life-section-work.html?sectionId=' + id);
+
+            // app.branch = app.branchOrg = id;
+            // //子列表点击事件，跳转到工作动态
+            // getOrgData(1,id,'',true);
         },
         goDetail: function (id, type) {
-            window.open('branch-life-inner.html?id=' + id + '&type=' + type + '&branch=' + app.branch);
+            window.location.href = 'branch-life-inner.html?id=' + id + '&type=' + type + '&branch=' + app.branch;
         }
     }
 });
@@ -117,11 +114,11 @@ $(function () {
         switch ($(ev.target).attr("data-id")) {
             case "":
                 //显示组织架构图，隐藏列表,重置branch,branchOrg
-                app.branch = '';
-                app.branchOrg = '';
-                $('.org-child.chart').addClass('active');
-                $('.org-child.list').removeClass('active');
-                getOrgData(1, '', '');
+                // app.branch = '';
+                // app.branchOrg = '';
+                // $('.org-child.chart').addClass('active');
+                // $('.org-child.list').removeClass('active');
+                // getOrgData(1, '', '');
                 break;
             case "34":
                 getWorkData(1, app.branch, 34);
@@ -140,6 +137,7 @@ $(function () {
      */
     getOrgData(1, app.branchOrg, '');
     parseBack();
+    parseOrg();
     /**
      * 初始化组织架构组件
      */
@@ -290,7 +288,7 @@ function getData(url, page, branch, type,isToWork) {
 
 function goDetail(elem) {
     window.event.returnValue = false;
-    window.location.href = 'branch-life-inner.html?id=' + $(elem).attr("id") + '&type=35';
+    window.open('branch-life-inner.html?id=' + $(elem).attr("id") + '&type=35');
 }
 
 
@@ -350,4 +348,27 @@ function parseBack() {
             $("div.class-btn-group img").eq(3).click();
             break;
     }
+}
+
+/**
+ * 加载对饮组织下的部门
+ */
+function parseOrg() {
+    var orgId = transformParams().orgId;
+    if(orgId) {
+        app.goInner(orgId);
+    }
+}
+
+/**
+ * 处理从组织架构图点击跳转的参数
+ */
+function transformParams() {
+    var params = location.search.substring(1).split('&');
+    var param = {};
+    params.forEach(function(value,index,array) {
+        var temp = value.split('=');
+        param[temp[0]] = temp[1];
+    });
+    return param;
 }

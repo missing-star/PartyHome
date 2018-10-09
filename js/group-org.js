@@ -49,7 +49,7 @@ function goHome() {
 }
 
 function goBack() {
-	goHome();
+    window.close();
 }
 
 function getData(url,page,branch) {

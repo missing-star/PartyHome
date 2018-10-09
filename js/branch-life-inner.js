@@ -25,19 +25,7 @@ function goHome() {
 }
 
 function goBack() {
-	var urlBack = $('.bread-crumb a').eq(1).attr('href');
-	if(urlBack) {
-        urlBack += '?type=' + app.type;
-        if(app.branch != '') {
-        	urlBack += '&branch=' + app.branch;
-		}
-		//返回指定页打开指定标签
-		window.location.href = urlBack;
-	}
-	else {
-		//返回上一页
-        window.history.back(-1);
-	}
+	window.close();
 }
 
 function getArticleContent(id) {

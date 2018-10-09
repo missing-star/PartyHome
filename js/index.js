@@ -44,7 +44,7 @@ var app = new Vue({
 	},
 	methods: {
         goDetail:function (url) {
-			window.location.href = url;
+			window.open(url);
         }
 	}
 });

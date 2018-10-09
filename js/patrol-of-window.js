@@ -20,7 +20,7 @@ function goHome() {
 }
 
 function goBack() {
-	goHome();
+    window.close();
 }
 
 function getBannerData(url) {
