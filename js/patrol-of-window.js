@@ -34,6 +34,9 @@ function getBannerData(url) {
         dataType:'json',
         success:function (data) {
             app.images = data.data.list.slice(0,5);
+            if(app.images.length % 2 == 0 && app.images.length != 0) {
+                app.images = app.images.slice(0,app.images.length - 1);
+            }
             setTimeout(function () {
                 //初始化轮播组件
                 initPlugin();

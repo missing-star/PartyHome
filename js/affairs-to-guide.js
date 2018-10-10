@@ -135,22 +135,31 @@ function getData(url,type,page) {
                 case 28:
                     //通知数据变更
                     app.noticeObj.noticeList = app.noticeObj.noticeList.concat(data.data.list);
-                    if(data.data.total > 10) {
+                    if(data.data.total > 10 && app.noticeObj.noticeList.length != data.data.total) {
                         app.noticeObj.isShow = true;
+                    }
+                    else {
+                        app.noticeObj.isShow = false;
                     }
                     break;
                 case 29:
                     //公告数据变更
                     app.annouceObj.announcementList = app.annouceObj.announcementList.concat(data.data.list);
-                    if(data.data.total > 10) {
+                    if(data.data.total > 10 && app.annouceObj.announcementList.length != data.data.total) {
                         app.annouceObj.isShow = true;
+                    }
+                    else {
+                        app.annouceObj.isShow = false;
                     }
                     break;
                 case 30:
                     //公示数据变更
                     app.publicityObj.publicityList = app.publicityObj.publicityList.concat(data.data.list);
-                    if(data.data.total > 10) {
+                    if(data.data.total > 10 && app.publicityObj.publicityList.length != data.data.total) {
                         app.publicityObj.isShow = true;
+                    }
+                    else {
+                        app.publicityObj.isShow = false;
                     }
                     break;
             }

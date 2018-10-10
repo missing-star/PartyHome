@@ -83,7 +83,7 @@ var app = new Vue({
             // getOrgData(1,id,'',true);
         },
         goDetail: function (id, type) {
-            window.location.href = 'branch-life-inner.html?id=' + id + '&type=' + type + '&branch=' + app.branch;
+            window.open('branch-life-inner.html?id=' + id + '&type=' + type + '&branch=' + app.branch);
         }
     }
 });

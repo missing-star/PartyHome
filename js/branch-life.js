@@ -263,7 +263,7 @@ function getData(url, page, branch, type,isToWork) {
                     //党员风采数据变更
                     app.partyMemberList = data.data.list.slice(0, 5);
                     if(app.partyMemberList.length % 2 == 0 && app.partyMemberList.length != 0) {
-                        app.partyMemberList.slice(0,app.partyMemberList.length - 1);
+                        app.partyMemberList = app.partyMemberList.slice(0,app.partyMemberList.length - 1);
                     }
                     //加载轮播组件
                     setTimeout(function () {
