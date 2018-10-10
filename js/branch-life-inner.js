@@ -21,7 +21,7 @@ var app = new Vue({
 });
 
 function goHome() {
-	window.location.href = 'javascript:;';
+	window.location.href = 'index.html';
 }
 
 function goBack() {

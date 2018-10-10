@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1766693-ae0b-48c9-b046-f0d3d31ddd04" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/affairs-to-guide.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/affairs-to-guide.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/branch-life-section.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/branch-life-section.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/branch-life.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/branch-life.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/patrol-of-window.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/patrol-of-window.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/branch-life-inner.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/branch-life-inner.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -69,7 +64,7 @@
         <counts>
           <entry key="css" value="1468" />
           <entry key="html" value="2537" />
-          <entry key="js" value="11299" />
+          <entry key="js" value="11309" />
           <entry key="txt" value="248" />
         </counts>
       </usages-collector>
@@ -77,7 +72,7 @@
         <counts>
           <entry key="CSS" value="1468" />
           <entry key="HTML" value="2537" />
-          <entry key="JavaScript" value="11299" />
+          <entry key="JavaScript" value="11309" />
           <entry key="PLAIN_TEXT" value="248" />
         </counts>
       </usages-collector>
@@ -88,26 +83,73 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/branch-life.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="267" column="28" lean-forward="true" selection-start-line="267" selection-start-column="28" selection-end-line="267" selection-end-column="28" />
+            <state relative-caret-position="190">
+              <caret line="261" column="20" selection-start-line="261" selection-start-column="16" selection-end-line="261" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/index.js">
+        <entry file="file://$PROJECT_DIR$/special-column.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="82">
+              <caret line="34" column="58" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/special-column.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="237">
-              <caret line="64" column="13" lean-forward="true" selection-start-line="62" selection-start-column="12" selection-end-line="64" selection-end-column="13" />
+              <caret line="62" column="19" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/special-column-article.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="237">
+              <caret line="62" column="19" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/patrol-of-window.js">
+        <entry file="file://$PROJECT_DIR$/js/branch-life-inner.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+            <state relative-caret-position="190">
+              <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+              <folding>
+                <element signature="e#30#34#1" expanded="true" />
+                <element signature="e#67#71#1" expanded="true" />
+                <element signature="e#30#34#1" expanded="true" />
+                <element signature="e#67#71#1" expanded="true" />
+                <element signature="e#30#34#1" expanded="true" />
+                <element signature="e#30#34#1" expanded="true" />
+                <element signature="e#67#71#1" expanded="true" />
+                <element signature="e#30#34#1" expanded="true" />
+                <element signature="e#67#71#1" expanded="true" />
+                <element signature="e#30#34#1" expanded="true" />
+                <element signature="e#67#71#1" expanded="true" />
+                <element signature="e#30#34#1" expanded="true" />
+                <element signature="e#30#34#1" expanded="true" />
+                <element signature="e#67#71#1" expanded="true" />
+                <element signature="e#30#34#1" expanded="true" />
+                <element signature="e#67#71#1" expanded="true" />
+                <element signature="e#30#34#1" expanded="true" />
+                <element signature="e#67#71#1" expanded="true" />
+                <element signature="e#30#34#1" expanded="true" />
+                <element signature="e#67#71#1" expanded="true" />
+                <element signature="e#30#34#1" expanded="true" />
+                <element signature="e#67#71#1" expanded="true" />
+                <element signature="e#30#34#1" expanded="true" />
+                <element signature="e#67#71#1" expanded="true" />
+                <element signature="e#30#34#1" expanded="true" />
+                <element signature="e#30#34#1" expanded="true" />
+                <element signature="e#30#34#1" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -208,13 +250,13 @@
         <option value="$PROJECT_DIR$/js/special-column-article.js" />
         <option value="$PROJECT_DIR$/js/outside-the-box.js" />
         <option value="$PROJECT_DIR$/js/study-and-experience.js" />
-        <option value="$PROJECT_DIR$/js/branch-life-inner.js" />
         <option value="$PROJECT_DIR$/js/affairs-to-guide.js" />
         <option value="$PROJECT_DIR$/js/branch-life-section.js" />
         <option value="$PROJECT_DIR$/js/script-add-params.js" />
         <option value="$PROJECT_DIR$/js/branch-life.js" />
         <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/js/patrol-of-window.js" />
+        <option value="$PROJECT_DIR$/js/branch-life-inner.js" />
       </list>
     </option>
   </component>
@@ -596,13 +638,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161965000" />
+    <option name="totallyTimeSpent" value="161979000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22243346" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1774398" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" />
@@ -808,9 +850,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
           <caret line="55" column="41" lean-forward="true" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -896,8 +935,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/special-column.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="46" column="16" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="16" />
+        <state relative-caret-position="237">
+          <caret line="62" column="19" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -910,8 +949,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/special-column-article.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="40" column="28" lean-forward="true" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+        <state relative-caret-position="237">
+          <caret line="62" column="19" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -945,8 +984,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/branch-life-inner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="111" column="97" selection-start-line="111" selection-start-column="97" selection-end-line="111" selection-end-column="97" />
+        <state relative-caret-position="190">
+          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
           <folding>
             <element signature="e#30#34#1" expanded="true" />
             <element signature="e#67#71#1" expanded="true" />
@@ -1021,13 +1060,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/script-add-params.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="36" selection-start-column="36" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/js/script-add-params.js" />
     <entry file="file://$PROJECT_DIR$/branch-life-section.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
@@ -1044,8 +1077,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/branch-life.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="267" column="28" lean-forward="true" selection-start-line="267" selection-start-column="28" selection-end-line="267" selection-end-column="28" />
+        <state relative-caret-position="190">
+          <caret line="261" column="20" selection-start-line="261" selection-start-column="16" selection-end-line="261" selection-end-column="20" />
         </state>
       </provider>
     </entry>
