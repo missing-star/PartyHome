@@ -25,18 +25,6 @@
                     <p class="image-desc">{{image.names}}</p>
                 </div>
             </div>
-            <div v-for="image in orgList.list" class="img-group">
-                <img :src="image.image" @click="goInner(image.id)"/>
-                <div class="image-desc-container">
-                    <p class="image-desc">{{image.names}}</p>
-                </div>
-            </div>
-            <div v-for="image in orgList.list" class="img-group">
-                <img :src="image.image" @click="goInner(image.id)"/>
-                <div class="image-desc-container">
-                    <p class="image-desc">{{image.names}}</p>
-                </div>
-            </div>
             <div class="more" v-if="orgList.isMore">
                 <a class="more-link" href="javascript:;" @click="readAllOrg()">MORE</a>
             </div>
