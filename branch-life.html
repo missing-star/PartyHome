@@ -79,7 +79,7 @@
     <!--
         党员风采
     -->
-    <div class="main-content image">
+    <div id="carousel-image-container" class="main-content image">
         <!--图片轮播-->
         <div class="poster-main" id="carousel-image" data-setting='{
 										"width":1000,
@@ -93,15 +93,8 @@
 										"verticalAlign":"middle"
 										}'>
             <div class="poster-btn poster-prev-btn"></div>
-            <ul class="poster-list">
-                <li onclick="goDetail(this)" :id="image.id" v-for="image in partyMemberList" class="poster-item">
-                    <a href="javascrip:;">
-                        <img :src="image.image" alt="" width="100%"/>
-                        <div class="image-desc-container">
-                            <p class="image-desc">{{image.title}}</p>
-                        </div>
-                    </a>
-                </li>
+            <ul id="poster-list" class="poster-list">
+
             </ul>
             <div class="poster-btn poster-next-btn"></div>
         </div>

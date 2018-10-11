@@ -2,28 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1766693-ae0b-48c9-b046-f0d3d31ddd04" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/bootstrap/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/bootstrap/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/jquery/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/vue/vue.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/affairs-to-guide.html" beforeDir="false" afterPath="$PROJECT_DIR$/affairs-to-guide.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/branch-life-inner.html" beforeDir="false" afterPath="$PROJECT_DIR$/branch-life-inner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/branch-life-section-work.html" beforeDir="false" afterPath="$PROJECT_DIR$/branch-life-section-work.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/branch-life-section.html" beforeDir="false" afterPath="$PROJECT_DIR$/branch-life-section.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/branch-life.html" beforeDir="false" afterPath="$PROJECT_DIR$/branch-life.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/branch-life.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/branch-life.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discussion-and-exchange.html" beforeDir="false" afterPath="$PROJECT_DIR$/discussion-and-exchange.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/group-org-article.html" beforeDir="false" afterPath="$PROJECT_DIR$/group-org-article.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/group-org.html" beforeDir="false" afterPath="$PROJECT_DIR$/group-org.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/branch-life.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/branch-life.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newest-dyn.html" beforeDir="false" afterPath="$PROJECT_DIR$/newest-dyn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outside-the-box.html" beforeDir="false" afterPath="$PROJECT_DIR$/outside-the-box.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patrol-of-window.html" beforeDir="false" afterPath="$PROJECT_DIR$/patrol-of-window.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/special-column-article.html" beforeDir="false" afterPath="$PROJECT_DIR$/special-column-article.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/special-column.html" beforeDir="false" afterPath="$PROJECT_DIR$/special-column.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-and-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/study-and-experience.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/broadcast/js/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/broadcast/js/Carousel.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -46,8 +28,8 @@
     <session id="-700525758">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="22" />
-          <entry key="project.open.time.0" value="14" />
+          <entry key="project.closed" value="23" />
+          <entry key="project.open.time.0" value="15" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.18" value="1" />
@@ -61,14 +43,14 @@
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="30" />
+          <entry key="project.opened" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="81" />
-          <entry key="html" value="155" />
-          <entry key="js" value="169" />
+          <entry key="html" value="172" />
+          <entry key="js" value="172" />
           <entry key="png" value="9" />
           <entry key="rnc" value="1" />
         </counts>
@@ -76,26 +58,26 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="81" />
-          <entry key="HTML" value="155" />
+          <entry key="HTML" value="172" />
           <entry key="Image" value="9" />
-          <entry key="JavaScript" value="169" />
+          <entry key="JavaScript" value="172" />
           <entry key="RNG Compact" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="1712" />
-          <entry key="html" value="2814" />
-          <entry key="js" value="11979" />
-          <entry key="txt" value="272" />
+          <entry key="html" value="2849" />
+          <entry key="js" value="12997" />
+          <entry key="txt" value="289" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="1712" />
-          <entry key="HTML" value="2814" />
-          <entry key="JavaScript" value="11979" />
-          <entry key="PLAIN_TEXT" value="272" />
+          <entry key="HTML" value="2850" />
+          <entry key="JavaScript" value="12996" />
+          <entry key="PLAIN_TEXT" value="289" />
         </counts>
       </usages-collector>
     </session>
@@ -103,37 +85,46 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/patrol-of-window.html">
+        <entry file="file://$PROJECT_DIR$/js/branch-life.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="70" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/special-column.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="69" column="80" lean-forward="true" selection-start-line="67" selection-end-line="69" selection-end-column="80" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/special-column-article.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="70" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="70" />
+            <state relative-caret-position="129">
+              <caret line="181" column="70" selection-start-line="181" selection-start-column="62" selection-end-line="181" selection-end-column="70" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/study-and-experience.html">
+        <entry file="file://$PROJECT_DIR$/plugins/broadcast/js/Carousel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="70" selection-start-line="6" selection-start-column="70" selection-end-line="6" selection-end-column="70" />
+            <state relative-caret-position="200">
+              <caret line="109" column="39" selection-start-line="109" selection-start-column="39" selection-end-line="109" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-330">
+              <caret line="64" column="13" lean-forward="true" selection-start-line="62" selection-start-column="12" selection-end-line="64" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/branch-life.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="96" selection-start-line="96" selection-end-line="96" />
             </state>
           </provider>
         </entry>
@@ -151,12 +142,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$(fun</find>
-      <find>$(function</find>
-      <find>orglist</find>
-      <find>getData</find>
-      <find>conso</find>
-      <find>read</find>
       <find>readall</find>
       <find>readMore</find>
       <find>isto</find>
@@ -166,7 +151,6 @@
       <find>gode</find>
       <find>index.html</find>
       <find>branch-life.html</find>
-      <find>goDetail</find>
       <find>%</find>
       <find>2</find>
       <find>% 2</find>
@@ -179,8 +163,15 @@
       <find>page2</find>
       <find>.click</find>
       <find>getnext</find>
-      <find>35</find>
       <find>isNextPage</find>
+      <find>35</find>
+      <find>initPlugin</find>
+      <find>rotate</find>
+      <find>carouselRotate</find>
+      <find>init</find>
+      <find>poster-list</find>
+      <find>goDetail</find>
+      <find>console</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -205,7 +196,6 @@
         <option value="$PROJECT_DIR$/css/patrol-of-window.css" />
         <option value="$PROJECT_DIR$/css/index.css" />
         <option value="$PROJECT_DIR$/css/common.css" />
-        <option value="$PROJECT_DIR$/plugins/broadcast/js/Carousel.js" />
         <option value="$PROJECT_DIR$/branch-life-work.html" />
         <option value="$PROJECT_DIR$/js/branch-life-section-work.js" />
         <option value="$PROJECT_DIR$/js/newest-dyn.js" />
@@ -224,13 +214,11 @@
         <option value="$PROJECT_DIR$/js/patrol-of-window.js" />
         <option value="$PROJECT_DIR$/js/branch-life-inner.js" />
         <option value="$PROJECT_DIR$/css/branch-life.css" />
-        <option value="$PROJECT_DIR$/js/branch-life.js" />
         <option value="$PROJECT_DIR$/assets/bootstrap/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/assets/bootstrap/bootstrap.min.js" />
         <option value="$PROJECT_DIR$/assets/jquery/jquery.min.js" />
         <option value="$PROJECT_DIR$/assets/vue/vue.min.js" />
         <option value="$PROJECT_DIR$/affairs-to-guide.html" />
-        <option value="$PROJECT_DIR$/branch-life.html" />
         <option value="$PROJECT_DIR$/branch-life-inner.html" />
         <option value="$PROJECT_DIR$/branch-life-section.html" />
         <option value="$PROJECT_DIR$/branch-life-section-work.html" />
@@ -244,6 +232,9 @@
         <option value="$PROJECT_DIR$/special-column.html" />
         <option value="$PROJECT_DIR$/special-column-article.html" />
         <option value="$PROJECT_DIR$/study-and-experience.html" />
+        <option value="$PROJECT_DIR$/branch-life.html" />
+        <option value="$PROJECT_DIR$/js/branch-life.js" />
+        <option value="$PROJECT_DIR$/plugins/broadcast/js/Carousel.js" />
       </list>
     </option>
   </component>
@@ -278,13 +269,7 @@
             <path>
               <item name="HomeParty" type="b2602c69:ProjectViewProjectNode" />
               <item name="HomeParty" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HomeParty" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HomeParty" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -369,7 +354,8 @@
       <workItem from="1539135154724" duration="3072000" />
       <workItem from="1539154452796" duration="168000" />
       <workItem from="1539221937940" duration="4580000" />
-      <workItem from="1539226564655" duration="1078000" />
+      <workItem from="1539226564655" duration="7037000" />
+      <workItem from="1539241657321" duration="2480000" />
     </task>
     <task id="LOCAL-00001" summary="定义URL全局变量">
       <created>1537166897759</created>
@@ -644,17 +630,24 @@
       <option name="project" value="LOCAL" />
       <updated>1539154533747</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="移动cdn到本地">
+      <created>1539227744467</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1539227744467</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168215000" />
+    <option name="totallyTimeSpent" value="176654000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1774398" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.1774398" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" />
@@ -673,6 +666,26 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1774398" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="0" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32928476" />
+      <window_info anchor="bottom" id="Run" order="3" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.10526316" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -717,7 +730,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改图片顺序" />
     <MESSAGE value="修改专题专栏右上为图片" />
     <MESSAGE value="对接数据" />
     <MESSAGE value="专题专栏数据对接" />
@@ -742,7 +754,8 @@
     <MESSAGE value="增加巡视之窗type显示标题" />
     <MESSAGE value="修改内页home连接" />
     <MESSAGE value="群团组织数据重复" />
-    <option name="LAST_COMMIT_MESSAGE" value="群团组织数据重复" />
+    <MESSAGE value="移动cdn到本地" />
+    <option name="LAST_COMMIT_MESSAGE" value="移动cdn到本地" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/plugins/org-chart/css/jquery.orgchart.css">
@@ -812,13 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/broadcast/js/Carousel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" column="47" lean-forward="true" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -893,13 +899,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="64" column="13" lean-forward="true" selection-start-line="62" selection-start-column="12" selection-end-line="64" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/patrol-of-window.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
@@ -946,16 +945,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding>
-            <element signature="e#58784#58984#2" expanded="true" />
-            <element signature="e#59192#59341#2" expanded="true" />
-            <element signature="e#59843#59989#2" expanded="true" />
-            <element signature="e#60290#60456#1" expanded="true" />
-            <element signature="e#71108#71351#2" expanded="true" />
-            <element signature="e#72218#72467#2" expanded="true" />
-            <element signature="e#99230#99420#2" expanded="true" />
-            <element signature="e#99466#99656#2" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -989,107 +978,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/branch-life.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="232" column="23" selection-start-line="232" selection-start-column="23" selection-end-line="232" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/affairs-to-guide.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="-2511">
           <caret line="6" column="71" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/branch-life.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="144" column="80" lean-forward="true" selection-start-line="142" selection-end-line="144" selection-end-column="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/branch-life-inner.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
+        <state relative-caret-position="1080">
           <caret line="40" column="84" lean-forward="true" selection-start-line="38" selection-start-column="4" selection-end-line="40" selection-end-column="84" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/branch-life-section.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
+        <state relative-caret-position="3699">
           <caret line="137" column="80" lean-forward="true" selection-start-line="135" selection-end-line="137" selection-end-column="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/branch-life-section-work.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
+        <state relative-caret-position="3699">
           <caret line="137" column="80" lean-forward="true" selection-start-line="135" selection-end-line="137" selection-end-column="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/discussion-and-exchange.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="-862">
           <caret line="6" column="71" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/group-org.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
+        <state relative-caret-position="1728">
           <caret line="64" column="80" lean-forward="true" selection-start-line="62" selection-end-line="64" selection-end-column="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/group-org-article.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="-1213">
           <caret line="6" column="71" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="70" column="84" lean-forward="true" selection-start-line="68" selection-start-column="4" selection-end-line="70" selection-end-column="84" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/newest-dyn.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="-2536">
           <caret line="6" column="71" lean-forward="true" selection-start-line="6" selection-end-line="6" selection-end-column="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/outside-the-box.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
+        <state relative-caret-position="1350">
           <caret line="50" column="84" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="50" selection-end-column="84" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/patrol-of-window.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="-929">
           <caret line="6" column="70" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="70" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/special-column.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
+        <state relative-caret-position="1863">
           <caret line="69" column="80" lean-forward="true" selection-start-line="67" selection-end-line="69" selection-end-column="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/special-column-article.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="-862">
           <caret line="6" column="70" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="70" />
         </state>
       </provider>
@@ -1098,6 +1066,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="6" column="70" selection-start-line="6" selection-start-column="70" selection-end-line="6" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330">
+          <caret line="64" column="13" lean-forward="true" selection-start-line="62" selection-start-column="12" selection-end-line="64" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/branch-life.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/branch-life.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="181" column="70" selection-start-line="181" selection-start-column="62" selection-end-line="181" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/broadcast/js/Carousel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="109" column="39" selection-start-line="109" selection-start-column="39" selection-end-line="109" selection-end-column="39" />
         </state>
       </provider>
     </entry>

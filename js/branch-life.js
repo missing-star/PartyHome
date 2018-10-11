@@ -2,8 +2,9 @@ var page0 = page1 = page2 = page3 = 1;
 var app = new Vue({
     el: '#app',
     data: {
+        reLoadPlug:true,
         isNextPage:true,
-        imageTotal:0,
+        imageTotalPage:0,
         imagePage:1,
         isFirstPage:true,
         isLastPage:false,
@@ -95,11 +96,21 @@ var app = new Vue({
         },
         //上一页轮播图数据
         getPrevData:function () {
+            app.reLoadPlug = false;
+            if(page2 == 2) {
+                app.isFirstPage = true;
+            }
+            app.isLastPage = false;
             app.isNextPage = false;
             getDangData(--page2,app.branch,35);
         },
         //下一页轮播图数据
         getNextData:function () {
+            app.reLoadPlug = false;
+            if(page2 == app.imageTotalPage - 1) {
+                app.isLastPage = true;
+            }
+            app.isFirstPage = false;
             app.isNextPage = true;
             getDangData(++page2,app.branch,35);
         }
@@ -164,6 +175,22 @@ $(function () {
  * 初始化轮播组件
  */
 function initPlugin() {
+    $('#poster-list').empty();
+    var liList = '';
+    app.partyMemberList.forEach(function (value,index,array) {
+        var li =
+        `<li onclick="goDetail(this)" id="${value.id}" class="poster-item">
+            <a href="javascrip:;">
+                <img src="${value.image}" alt="" width="100%"/>
+                <div class="image-desc-container">
+                    <p class="image-desc">${value.title}</p>
+                </div>
+            </a>
+        </li>
+        `;
+        liList += li;
+    });
+    $('#poster-list').append(liList);
     Carousel.init($("#carousel-image"));
     //触摸事件
     var x_orgin = 0;
@@ -282,21 +309,10 @@ function getData(url, page, branch, type, isToWork,limit) {
                         app.isFirstPage = app.isLastPage = true;
                         break;
                     }
-                    if(app.isNextPage) {
-                        app.imageTotal += data.data.list.length;
-                    }
-                    else {
-                        app.imageTotal -= data.data.list.length;
-                    }
+                    app.imageTotalPage = Math.ceil(data.data.total / limit);
                     app.partyMemberList = data.data.list;
                     if (app.partyMemberList.length % 2 == 0 && app.partyMemberList.length != 0) {
                         app.partyMemberList = app.partyMemberList.slice(0, app.partyMemberList.length - 1);
-                    }
-                    if(app.imageTotal == data.data.total) {
-                        app.isLastPage = true;
-                    }
-                    if(app.imageTotal == 0) {
-                        app.isFirstPage = true;
                     }
                     //加载轮播组件
                     setTimeout(function () {
