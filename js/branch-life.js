@@ -2,6 +2,11 @@ var page0 = page1 = page2 = page3 = 1;
 var app = new Vue({
     el: '#app',
     data: {
+        isNextPage:true,
+        imageTotal:0,
+        imagePage:1,
+        isFirstPage:true,
+        isLastPage:false,
         branch: '',
         branchOrg: '',
         partyMemberList: [],
@@ -9,9 +14,9 @@ var app = new Vue({
             list: [],
             isMore: true
         },
-        orgChildList:{
-            list:[],
-            isShow:false
+        orgChildList: {
+            list: [],
+            isShow: false
         },
         orgObj: {
             orgList: [],
@@ -80,13 +85,23 @@ var app = new Vue({
             // app.orgObj.isShow = false;
             // getOrgData(1, id, '');
         },
-        goWorkFromOrg:function(id) {
+        goWorkFromOrg: function (id) {
             app.branch = app.branchOrg = id;
             //子列表点击事件，跳转到工作动态
-            getOrgData(1,id,'',true);
+            getOrgData(1, id, '', true);
         },
         goDetail: function (id, type) {
             window.open('branch-life-inner.html?id=' + id + '&type=' + type + '&branch=' + app.branch);
+        },
+        //上一页轮播图数据
+        getPrevData:function () {
+            app.isNextPage = false;
+            getDangData(--page2,app.branch,35);
+        },
+        //下一页轮播图数据
+        getNextData:function () {
+            app.isNextPage = true;
+            getDangData(++page2,app.branch,35);
         }
     }
 });
@@ -184,8 +199,8 @@ function goBack() {
 /**
  * 获取组织架构数据
  */
-function getOrgData(page, branch, type,isToWork) {
-    getData(rootUrl + 'index/branchLife', page, branch, type,isToWork);
+function getOrgData(page, branch, type, isToWork) {
+    getData(rootUrl + 'index/branchLife', page, branch, type, isToWork);
 }
 
 /**
@@ -199,7 +214,7 @@ function getWorkData(page, branch, type) {
  * 获取党员风采数据
  */
 function getDangData(page, branch, type) {
-    getData(rootUrl + 'index/branchLife', page, branch, type);
+    getData(rootUrl + 'index/branchLife', page, branch, type,false,9);
 }
 
 /**
@@ -209,13 +224,14 @@ function getBrancActhData(page, branch, type) {
     getData(rootUrl + 'index/branchLife', page, branch, type);
 }
 
-function getData(url, page, branch, type,isToWork) {
+function getData(url, page, branch, type, isToWork,limit) {
     $.ajax({
         url: url,
         data: {
             p: page,
             branch: branch,
-            type: type
+            type: type,
+            limit:limit
         },
         type: 'post',
         dataType: 'json',
@@ -233,7 +249,7 @@ function getData(url, page, branch, type,isToWork) {
                     }
                     else {
                         //组织架构数据变更
-                        if(data.data.list.length == 1 && !data.data.total) {
+                        if (data.data.list.length == 1 && !data.data.total) {
                             app.orgObj.orgList = transformOrgData(data.data.list)[0];
                             initOrgPlugin(app.orgObj.orgList);
                         }
@@ -252,7 +268,7 @@ function getData(url, page, branch, type,isToWork) {
                 case 34:
                     //工作动态数据变更
                     app.workObj.workList = app.workObj.workList.concat(data.data.list);
-                    if (data.data.total > 10 &&  app.workObj.workList.length != data.data.total) {
+                    if (data.data.total > 10 && app.workObj.workList.length != data.data.total) {
                         app.workObj.isShow = true;
                     }
                     else {
@@ -261,9 +277,26 @@ function getData(url, page, branch, type,isToWork) {
                     break;
                 case 35:
                     //党员风采数据变更
-                    app.partyMemberList = data.data.list.slice(0, 5);
-                    if(app.partyMemberList.length % 2 == 0 && app.partyMemberList.length != 0) {
-                        app.partyMemberList = app.partyMemberList.slice(0,app.partyMemberList.length - 1);
+                    if(data.data.total == 0) {
+                        //隐藏上一页下一页按钮
+                        app.isFirstPage = app.isLastPage = true;
+                        break;
+                    }
+                    if(app.isNextPage) {
+                        app.imageTotal += data.data.list.length;
+                    }
+                    else {
+                        app.imageTotal -= data.data.list.length;
+                    }
+                    app.partyMemberList = data.data.list;
+                    if (app.partyMemberList.length % 2 == 0 && app.partyMemberList.length != 0) {
+                        app.partyMemberList = app.partyMemberList.slice(0, app.partyMemberList.length - 1);
+                    }
+                    if(app.imageTotal == data.data.total) {
+                        app.isLastPage = true;
+                    }
+                    if(app.imageTotal == 0) {
+                        app.isFirstPage = true;
                     }
                     //加载轮播组件
                     setTimeout(function () {
@@ -295,7 +328,7 @@ function goDetail(elem) {
 
 function initOrgPlugin(dataSource) {
     var datascource = dataSource;
-    if($('#chart-container').find('.orgchart').length == 0) {
+    if ($('#chart-container').find('.orgchart').length == 0) {
         $('#chart-container').orgchart({
             'data': datascource,
             toggleSiblingsResp: false,
@@ -327,16 +360,16 @@ function goInner(id) {
 function parseBack() {
     var str = location.search;
     var params = str.substring(1).split('&');
-    params = params.map(function(value,index) {
+    params = params.map(function (value, index) {
         return value.substring(value.indexOf('=') + 1);
     });
-    if(params[1]) {
+    if (params[1]) {
         app.branch = app.branchOrg = params[1];
     }
     switch (parseInt(params[0])) {
         case 34:
             //工作动态
-            if(params[1]) {
+            if (params[1]) {
                 app.goWorkFromOrg(params[1]);
             }
             break;

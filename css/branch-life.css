@@ -190,9 +190,6 @@ div.main-content.flex.active {
 div.main-content.active.image {
 	background: transparent;
 	height: 70%;
-	display: flex;
-	display: -webkit-flex;
-	display: -moz-box;
 	position: relative;
 }
 
@@ -245,6 +242,7 @@ div.main-content.flex.active::-webkit-scrollbar,div.main-content.org.active::-we
 .poster-main {
 	position: relative;
 	margin: 50px auto;
+	margin-bottom: 10px;
 }
 
 .poster-main .poster-list .poster-item {
@@ -423,4 +421,27 @@ div.org-child.list{
 }
 #branch-activity .image-desc-container {
 	width: 100%;
+}
+.next-prev-group{
+	height: 80px;
+	display:flex;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flex;
+	display: -o-flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.next-prev-group button{
+	color: rgb(255,255,255);
+	background: rgba(243, 67, 68, 0.95);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: none;
+	height: 100%;
+	width: 180px;
+}
+button.invisible{
+	display: none;
 }
