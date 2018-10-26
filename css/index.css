@@ -50,7 +50,7 @@ img.home-title{
 	right: 0;
 }
 div#carousel-button .poster-prev-btn,div#carousel-button .poster-next-btn{
-	/*display: none;*/
+	display: none;
 }
 
 img {

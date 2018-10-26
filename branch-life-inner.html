@@ -3,14 +3,14 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>支部生活-内页</title>
+	<title id="article-title"></title>
 	<link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet" />
 	<link href="css/common.css" rel="stylesheet" />
 	<link href="css/branch-life-inner.css" rel="stylesheet" />
 </head>
 
 <body>
-	<header>
+	<header style="padding: 0;">
 		<img class="home-title" src="img/index/title.png">
 	</header>
 	<div id="app" class="container">
@@ -26,9 +26,6 @@
 			</p>
 			<article v-html="articleContent.content" class="article-content">
 			</article>
-			<div class="bottom-read-btn">
-				<a class="read-all-link" href="javascript:;" @click="redAllArticle()">阅读全文+</a>
-			</div>
 		</div>
 	</div>
 	<!--home键，back键-->

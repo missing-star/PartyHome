@@ -41,6 +41,7 @@ function getArticleContent(id) {
 				data.data.content = '<video controls="controls" src="'+data.data.attachfile+'"></video>' + data.data.content;
 			}
             app.articleContent = data.data;
+			$("#article-title").text(data.data.title);
 		},
 		error:function () {
 
@@ -79,13 +80,13 @@ function parseTitle(type) {
 	else {
         switch (parseInt(type)) {
             case 22:
-                app.titleHeader = '<a href="javascript:;">首页</a> &gt; <a href="javascript:;">最新动态</a> &gt; 通知';
+                app.titleHeader = '<a href="javascript:;">首页</a> &gt; <a href="javascript:;">通知公告</a> &gt; 通知';
                 break;
             case 23:
-                app.titleHeader = '<a href="javascript:;">首页</a> &gt; <a href="javascript:;">最新动态</a> &gt; 公告';
+                app.titleHeader = '<a href="javascript:;">首页</a> &gt; <a href="javascript:;">通知公告</a> &gt; 公告';
                 break;
             case 24:
-                app.titleHeader = '<a href="javascript:;">首页</a> &gt; <a href="javascript:;">最新动态</a> &gt; 公示';
+                app.titleHeader = '<a href="javascript:;">首页</a> &gt; <a href="javascript:;">通知公告</a> &gt; 公示';
                 break;
             case 25:
                 app.titleHeader = '<a href="javascript:;">首页</a> &gt; <a href="javascript:;">他山之石</a>';
@@ -115,7 +116,7 @@ function parseTitle(type) {
                 app.titleHeader = '<a href="javascript:;">首页</a> &gt; 探讨交流';
                 break;
             case 59:
-                app.titleHeader = '<a href="javascript:;">首页</a> &gt; 学习体会';
+                app.titleHeader = '<a href="javascript:;">首页</a> &gt; 建党要闻';
                 break;
         }
 	}
