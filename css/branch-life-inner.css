@@ -10,7 +10,7 @@ body {
 }
 
 div.container {
-	height: 80%;
+	height: 90%;
 }
 
 header {
@@ -23,7 +23,7 @@ p.bread-crumb {
 
 div.main-content {
 	position: relative;
-	height: 80%;
+	height: 90%;
 	background: #FFFFFF;
 	border-radius: 8px;
 }
@@ -43,7 +43,7 @@ p.dashed-line {
 }
 
 article.article-content {
-	height: 80%;
+	height: 85%;
 	overflow: scroll;
 }
 
